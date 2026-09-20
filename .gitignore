@@ -1,0 +1,93 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.venv
+env/
+venv/
+ENV/
+
+# Environment Variables & Secrets
+.env
+*.env.local
+*.env.*.local
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Model weights & Checkpoints (Large binaries)
+models/**/*.pt
+models/**/*.safetensors
+models/**/*.bin
+models/**/*.onnx
+models/**/*.joblib
+!models/**/.gitkeep
+
+# Data directories (raw large files)
+data/raw/*
+data/interim/*
+data/processed/*
+data/external/*
+!data/**/.gitkeep
+
+# Experiment runs large artifacts
+experiments/runs/**/*
+!experiments/**/.gitkeep
+!experiments/registry.json
+
+# Node / Frontend
+node_modules/
+.next/
+out/
+.npm
+
+# Operating System & IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Temporary database files
+*.sqlite3
+*.db
+truthlens_test.db
+truthlens.db
