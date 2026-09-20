@@ -133,7 +133,9 @@ class StatisticalTester:
             interp = (
                 f"Statistically significant association detected (χ²={chi2_stat}, df={dof}, p={p_val:.2e}, "
                 f"Cramér's V={cramers_v}). Observed statement truthfulness differs systematically across political "
-                f"affiliations in this benchmark. Note that Cramér's V of {cramers_v} indicates the magnitude of association."
+                f"affiliations in this fact-checking benchmark. Under Cohen's (1988) conventions for df*=2 "
+                f"(small=0.07, medium=0.21, large=0.35), Cramér's V of {cramers_v} indicates a small-to-modest "
+                f"association rather than a strong relationship, distinguishing statistical significance from practical magnitude."
             )
         else:
             interp = (
@@ -345,8 +347,9 @@ class StatisticalTester:
         if is_sig:
             interp = (
                 f"Statistically significant deviation from uniform class distribution (χ²={chi2_stat}, df={dof}, "
-                f"p={p_val:.2e}, Cohen's w={cohens_w}). The benchmark exhibits significant class disparity relative "
-                f"to an equal prior expectation."
+                f"p={p_val:.2e}, Cohen's w={cohens_w}). Under Cohen's (1988) conventions (small=0.10, medium=0.30, "
+                f"large=0.50), Cohen's w of {cohens_w} represents a small deviation from perfect parity. This rejection "
+                f"merely documents non-uniform class frequencies across veracity tiers and does not imply data defectiveness or bias."
             )
         else:
             interp = (

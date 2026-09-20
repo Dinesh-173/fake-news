@@ -8,7 +8,7 @@ meta:
   random_seed: 42
   pipeline_version: "1.0.0"
   analysis_version: "1.0.0"
-  dataset_freeze_status: "PROVISIONAL_PENDING_PHASE_3_AUDIT"
+  dataset_freeze_status: "FROZEN_POST_PHASE_3_AUDIT"
 
 active_benchmarks:
   liar:
@@ -17,7 +17,7 @@ active_benchmarks:
     version: "v1.0.0"
     acquisition_status: "AVAILABLE_LOCALLY"
     raw_path: "data/raw/liar"
-    license: "Creative Commons Attribution 4.0 International (Academic Use)"
+    license: "Non-Commercial Academic Research Use Only (Copyright retained by original sources / PolitiFact; see dataset README)"
     files:
       train:
         filename: "train.tsv"
@@ -40,6 +40,14 @@ active_benchmarks:
     splitting:
       strategy: "official_benchmark_splits"
       leakage_prevention: "enforce_cluster_isolation_on_train_test"
+    phase_4_consumption_artifacts:
+      pipeline_source: "TruthLens Phase 2 Pipeline with Atomic Cluster Protection"
+      processed_directory: "data/processed/liar"
+      train_split_path: "data/processed/liar/train.jsonl"
+      val_split_path: "data/processed/liar/val.jsonl"
+      test_split_path: "data/processed/liar/test.jsonl"
+      manifest_path: "data/processed/liar/manifest.json"
+      leakage_policy: "STRICT_ATOMIC_CLUSTER_ISOLATION (Zero duplicate or near-duplicate leakage between train and test/val)"
 
 candidate_benchmarks_unacquired:
   fakenewsnet:

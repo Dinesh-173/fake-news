@@ -34,7 +34,7 @@ def inspect_liar_local(raw_path: Path) -> dict:
         "record_count": f"{total:,} (Train={len(tr):,}, Val={len(va):,}, Test={len(te):,})",
         "raw_path": str(raw_path),
         "source": "William Yang Wang (ACL 2017)",
-        "license": "Creative Commons Attribution 4.0 International",
+        "license": "Non-Commercial Academic Research Use Only (Copyright retained by original sources / PolitiFact; see dataset README)",
         "labels": "6-class fine-grained veracity (pants-fire, false, barely-true, half-true, mostly-true, true)",
         "normalized_classes": "3-class TruthLens canonical (LIKELY_TRUE, LIKELY_FALSE, MISLEADING_OR_PARTIALLY_SUPPORTED)",
         "modalities": "Textual statements (100% text, 0% local images)",

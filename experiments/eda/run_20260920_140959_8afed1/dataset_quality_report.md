@@ -193,16 +193,17 @@
 
 ## 8. Duplicate & Near-Duplicate Analysis
 
-- **Exact Duplicates Count**: 26 (0.20%)
-- **Exact Duplicate Groups**: 24
+- **Exact Duplicate Redundant Records (`is_duplicate=True`)**: 26 (0.20%)
+- **Exact Duplicate Clusters**: 24 clusters (encompassing 50 total records: 24 primary retained, 26 redundant copies)
+- **Unique Singleton Records**: 12,786 (99.61%)
 - **Near-Duplicate Groups**: 1 (encompassing 2 records)
-- **Conflicting Clusters (Label Divergence)**: 5
+- **Conflicting Clusters (Veracity Divergence)**: 5
 
 ### Cluster Size Distribution
 
 - Singletons: 12,786
-- Pairs (Size 2): 22
-- Moderate Clusters (Size 3-5): 2
+- Pairs (Size 2): 22 clusters (44 records: 22 primary, 22 duplicate)
+- Moderate Clusters (Size 3-5): 2 clusters (6 records: 2 primary, 4 duplicate)
 - Large Clusters (>5): 0
 - Maximum Cluster Size: 3
 

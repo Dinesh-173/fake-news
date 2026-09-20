@@ -18,7 +18,7 @@ DATASET_CATALOG = {
         "author": "William Yang Wang (ACL 2017)",
         "source_url": "https://www.cs.ucsb.edu/~william/data/liar_dataset.zip",
         "expected_files": ["train.tsv", "valid.tsv", "test.tsv", "README"],
-        "license": "Creative Commons Attribution 4.0 International / Academic Research",
+        "license": "Non-Commercial Academic Research Use Only (Copyright retained by original sources / PolitiFact; see dataset README)",
         "archive_name": "liar_dataset.zip",
     },
     "fakenewsnet": {
