@@ -1,0 +1,37 @@
+{
+  "dataset_name": "liar",
+  "description": "Label normalization mapping for the LIAR benchmark (Wang, 2017)",
+  "canonical_target_states": [
+    "LIKELY_TRUE",
+    "LIKELY_FALSE",
+    "MISLEADING_OR_PARTIALLY_SUPPORTED",
+    "INSUFFICIENT_EVIDENCE"
+  ],
+  "mappings": {
+    "true": {
+      "target": "LIKELY_TRUE",
+      "rationale": "Source fact-checking determined statement is completely accurate."
+    },
+    "mostly-true": {
+      "target": "LIKELY_TRUE",
+      "rationale": "Statement is accurate with minor omission or clarification needed."
+    },
+    "half-true": {
+      "target": "MISLEADING_OR_PARTIALLY_SUPPORTED",
+      "rationale": "Statement has factual core but leaves out important nuances or context."
+    },
+    "barely-true": {
+      "target": "MISLEADING_OR_PARTIALLY_SUPPORTED",
+      "rationale": "Statement contains element of truth but ignores critical facts to create false impression."
+    },
+    "false": {
+      "target": "LIKELY_FALSE",
+      "rationale": "Statement is not accurate and contradicts verified facts."
+    },
+    "pants-fire": {
+      "target": "LIKELY_FALSE",
+      "rationale": "Statement is not accurate and makes a ridiculous, completely fabricated claim."
+    }
+  },
+  "unresolved_action": "exclude_from_normalized_experiments"
+}

@@ -1,9 +1,9 @@
 """Comprehensive runtime environment and dependency verification script for TruthLens."""
 
 import asyncio
-from pathlib import Path
 import platform
 import sys
+from pathlib import Path
 
 # Ensure workspace root is in sys.path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
@@ -20,7 +20,7 @@ def run_checks() -> bool:
     # 1. Python Check
     py_ver = platform.python_version()
     print(f"[1/7] Python Runtime: {py_ver} ({platform.platform()})")
-    if sys.version_info < (3, 10):
+    if sys.version_info < (3, 10):  # noqa: UP036
         print("  FAIL: Python version must be >= 3.10")
         all_passed = False
     else:
@@ -29,6 +29,7 @@ def run_checks() -> bool:
     # 2. PyTorch Runtime & Tensor Math Check
     try:
         import torch
+
         print(f"[2/7] PyTorch: {torch.__version__} (CUDA Available: {torch.cuda.is_available()})")
         # Test tensor creation, autograd, and matmul
         a = torch.tensor([[1.0, 2.0], [3.0, 4.0]], requires_grad=True)
@@ -47,6 +48,7 @@ def run_checks() -> bool:
     try:
         import sklearn
         from sklearn.linear_model import LogisticRegression
+
         print(f"[3/7] Scikit-Learn: {sklearn.__version__}")
         X = np.array([[1.0, 2.0], [2.0, 3.0], [-1.0, -2.0], [-2.0, -3.0]])
         y = np.array([1, 1, 0, 0])
@@ -62,6 +64,7 @@ def run_checks() -> bool:
     # 4. Transformers Module Check
     try:
         import transformers
+
         print(f"[4/7] Hugging Face Transformers: {transformers.__version__}")
         print("  PASS: Transformers package and symbols accessible.")
     except Exception as exc:
@@ -72,10 +75,13 @@ def run_checks() -> bool:
     try:
         import pydantic
         from pydantic import BaseModel, Field
+
         print(f"[5/7] Pydantic: {pydantic.__version__}")
+
         class TestModel(BaseModel):
             id: int
             name: str = Field(min_length=2)
+
         m = TestModel(id=1, name="TruthLens")
         assert m.name == "TruthLens"
         print("  PASS: Pydantic v2 schema validation verified.")
@@ -88,6 +94,7 @@ def run_checks() -> bool:
         import sqlalchemy
         from sqlalchemy import text
         from sqlalchemy.ext.asyncio import create_async_engine
+
         print(f"[6/7] SQLAlchemy: {sqlalchemy.__version__}")
 
         async def test_db():
@@ -108,7 +115,9 @@ def run_checks() -> bool:
     try:
         import fastapi
         from fastapi.testclient import TestClient
+
         from backend.app.main import app
+
         print(f"[7/7] FastAPI: {fastapi.__version__}")
         client = TestClient(app)
         res = client.get("/health")

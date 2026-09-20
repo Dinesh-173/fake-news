@@ -1,0 +1,43 @@
+{
+  "dataset_name": "fakeddit",
+  "description": "Label normalization mapping for Fakeddit (Nakamura et al., 2020)",
+  "canonical_target_states": [
+    "LIKELY_TRUE",
+    "LIKELY_FALSE",
+    "MISLEADING_OR_PARTIALLY_SUPPORTED",
+    "INSUFFICIENT_EVIDENCE"
+  ],
+  "mappings": {
+    "0": {
+      "target": "LIKELY_TRUE",
+      "source_class_name": "true",
+      "rationale": "Directly truthful submission corroborated by evidence."
+    },
+    "1": {
+      "target": "MISLEADING_OR_PARTIALLY_SUPPORTED",
+      "source_class_name": "satire / parody",
+      "rationale": "Humorous satire or parody that lacks genuine factual premise."
+    },
+    "2": {
+      "target": "MISLEADING_OR_PARTIALLY_SUPPORTED",
+      "source_class_name": "misleading content",
+      "rationale": "Misleading context framing a factual occurrence."
+    },
+    "3": {
+      "target": "LIKELY_FALSE",
+      "source_class_name": "manipulated content",
+      "rationale": "Content or imagery intentionally doctored or falsified."
+    },
+    "4": {
+      "target": "MISLEADING_OR_PARTIALLY_SUPPORTED",
+      "source_class_name": "false context",
+      "rationale": "Genuine content shared with false contextual narrative."
+    },
+    "5": {
+      "target": "LIKELY_FALSE",
+      "source_class_name": "completely fabricated",
+      "rationale": "Entire narrative is 100% false and fabricated."
+    }
+  },
+  "unresolved_action": "exclude_from_normalized_experiments"
+}

@@ -1,0 +1,25 @@
+{
+  "dataset_name": "nela_gt",
+  "description": "Label normalization mapping for NELA-GT source-level veracity indices (Gruppi et al.)",
+  "canonical_target_states": [
+    "LIKELY_TRUE",
+    "LIKELY_FALSE",
+    "MISLEADING_OR_PARTIALLY_SUPPORTED",
+    "INSUFFICIENT_EVIDENCE"
+  ],
+  "mappings": {
+    "reliable": {
+      "target": "LIKELY_TRUE",
+      "rationale": "High journalistic standards, fact-checking consensus."
+    },
+    "mixed": {
+      "target": "MISLEADING_OR_PARTIALLY_SUPPORTED",
+      "rationale": "Mixed reliability, frequent biased reporting or factual errors."
+    },
+    "unreliable": {
+      "target": "LIKELY_FALSE",
+      "rationale": "Low credibility outlet with repeated false assertions or conspiracy content."
+    }
+  },
+  "unresolved_action": "exclude_from_normalized_experiments"
+}

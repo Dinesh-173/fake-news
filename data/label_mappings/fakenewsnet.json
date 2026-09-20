@@ -1,0 +1,22 @@
+{
+  "dataset_name": "fakenewsnet",
+  "description": "Label normalization mapping for FakeNewsNet (Shu et al., 2019)",
+  "canonical_target_states": [
+    "LIKELY_TRUE",
+    "LIKELY_FALSE",
+    "MISLEADING_OR_PARTIALLY_SUPPORTED",
+    "INSUFFICIENT_EVIDENCE"
+  ],
+  "mappings": {
+    "real": {
+      "target": "LIKELY_TRUE",
+      "rationale": "Article confirmed as factual by PolitiFact/GossipCop journalists."
+    },
+    "fake": {
+      "target": "LIKELY_FALSE",
+      "rationale": "Article confirmed as fabricated or debunked by PolitiFact/GossipCop."
+    }
+  },
+  "notes": "FakeNewsNet is fundamentally binary; MISLEADING and INSUFFICIENT_EVIDENCE are not present in raw dataset ground truth.",
+  "unresolved_action": "exclude_from_normalized_experiments"
+}

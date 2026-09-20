@@ -156,7 +156,7 @@ Interactive OpenAPI documentation will be accessible at `http://127.0.0.1:8000/d
 | :--- | :--- | :--- |
 | **Phase 0: Specifications** | **VERIFIED** | 19 detailed specifications authored in `docs/` |
 | **Phase 1: Environment & Health** | **VERIFIED** | FastAPI, async SQLAlchemy, PyTorch tensor checks, Pytest suites pass |
-| **Phase 2: Dataset Pipeline** | *PENDING* | Planned in Phase 2 |
+| **Phase 2: Dataset Pipeline** | **VERIFIED** | Validation, cleaning, exact/near deduplication, label mapping, zero-leakage splitting, manifests |
 | **Phase 3: Dataset Quality Analysis** | *PENDING* | Planned in Phase 3 |
 | **Phase 4–10: ML & Evidence Models** | *PENDING* | Planned in subsequent phases |
 | **Phase 12: Web Interface** | *PENDING* | Planned in Phase 12 |
