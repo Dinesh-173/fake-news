@@ -1,0 +1,80 @@
+# TruthLens Research Project: Experimental Dataset Configuration
+# Defines active benchmarks, acquisition statuses, partition splits, and provenance constraints.
+
+meta:
+  project: "TruthLens"
+  phase: "Phase 3 Dataset Quality Analysis & Statistical Profiling"
+  last_updated: "2026-09-20"
+  random_seed: 42
+  pipeline_version: "1.0.0"
+  analysis_version: "1.0.0"
+  dataset_freeze_status: "PROVISIONAL_PENDING_PHASE_3_AUDIT"
+
+active_benchmarks:
+  liar:
+    name: "LIAR: A Benchmark Dataset for Fake News Detection"
+    citation: "William Yang Wang (ACL 2017)"
+    version: "v1.0.0"
+    acquisition_status: "AVAILABLE_LOCALLY"
+    raw_path: "data/raw/liar"
+    license: "Creative Commons Attribution 4.0 International (Academic Use)"
+    files:
+      train:
+        filename: "train.tsv"
+        sha256: "23ef8cb7ff57b25c941100d0744039cebc595d65a67ea190f72b330a658d8c36"
+        expected_records: 10269
+      valid:
+        filename: "valid.tsv"
+        sha256: "8dd3d7ed1a11e78ed7df090c9eddb0f91147f895850c78d49dd7b4e88fd09a16"
+        expected_records: 1284
+      test:
+        filename: "test.tsv"
+        sha256: "ee41e2c741e0019216952625145af8c4aa8c8d3057ec68284b134267bb845e6f"
+        expected_records: 1283
+    modality: "text_only"
+    label_mapping: "data/label_mappings/liar.json"
+    canonical_target_classes:
+      - "LIKELY_TRUE"
+      - "LIKELY_FALSE"
+      - "MISLEADING_OR_PARTIALLY_SUPPORTED"
+    splitting:
+      strategy: "official_benchmark_splits"
+      leakage_prevention: "enforce_cluster_isolation_on_train_test"
+
+candidate_benchmarks_unacquired:
+  fakenewsnet:
+    name: "FakeNewsNet: News Content, Social Context, and Spatiotemporal Information"
+    citation: "Kai Shu et al. (ACM SIGKDD 2019)"
+    acquisition_status: "NOT_LOCALLY_ACQUIRED"
+    raw_path: "data/raw/fakenewsnet"
+    target_phase: "Phase 7 (Evidence Retrieval) & Phase 13 (Transfer Analysis)"
+    acquisition_procedure: "Run hydration scripts with academic Twitter API keys."
+
+  fakeddit:
+    name: "Fakeddit: A Multi-Modal Dataset for Fine-Grained Fake News Detection"
+    citation: "Kai Nakamura et al. (LREC 2020)"
+    acquisition_status: "NOT_LOCALLY_ACQUIRED"
+    raw_path: "data/raw/fakeddit"
+    target_phase: "Phase 9 (Vision Processing) & Phase 10 (Multimodal Fusion)"
+    acquisition_procedure: "Download multimodal image archive and submission TSVs from academic mirror."
+
+  nela_gt:
+    name: "NELA-GT: News and Factuality Benchmark"
+    citation: "Mauricio Gruppi et al. (Dataverse, 2018-2022)"
+    acquisition_status: "NOT_LOCALLY_ACQUIRED"
+    raw_path: "data/raw/nela"
+    target_phase: "Phase 13 (Cross-Dataset Veracity Generalizability)"
+    acquisition_procedure: "Download news article archive from Harvard Dataverse."
+
+preprocessing_and_auditing_rules:
+  text_cleaning:
+    unicode_normalization: "NFC"
+    strip_unprintable_control_chars: true
+    collapse_whitespace: true
+  deduplication:
+    exact_hash: "SHA-256 (lowercased, collapsed text)"
+    near_duplicate_method: "Character 5-gram Jaccard Similarity"
+    near_duplicate_threshold: 0.85
+  leakage_policy:
+    strict_split_isolation: true
+    allow_cross_split_duplicates: false

@@ -1,0 +1,48 @@
+{
+  "datasets_profiled": [
+    "train",
+    "valid",
+    "test"
+  ],
+  "is_multi_dataset": false,
+  "pairwise_overlaps": [
+    {
+      "source_name": "train",
+      "target_name": "valid",
+      "source_records": 10269,
+      "target_records": 1284,
+      "exact_text_overlap_count": 5,
+      "exact_text_overlap_ratio": 0.0039,
+      "normalized_overlap_count": 5,
+      "potential_contamination_count": 5,
+      "contamination_risk_level": "LOW"
+    },
+    {
+      "source_name": "train",
+      "target_name": "test",
+      "source_records": 10269,
+      "target_records": 1283,
+      "exact_text_overlap_count": 4,
+      "exact_text_overlap_ratio": 0.0031,
+      "normalized_overlap_count": 4,
+      "potential_contamination_count": 4,
+      "contamination_risk_level": "HIGH"
+    },
+    {
+      "source_name": "valid",
+      "target_name": "test",
+      "source_records": 1284,
+      "target_records": 1283,
+      "exact_text_overlap_count": 0,
+      "exact_text_overlap_ratio": 0.0,
+      "normalized_overlap_count": 0,
+      "potential_contamination_count": 0,
+      "contamination_risk_level": "NONE"
+    }
+  ],
+  "cross_split_leakage_detected": true,
+  "notes": [
+    "Evaluated pairwise contamination across 3 partitions (train, valid, test).",
+    "CRITICAL WARNING: Split overlap detected! Data leakage is present between partitions."
+  ]
+}

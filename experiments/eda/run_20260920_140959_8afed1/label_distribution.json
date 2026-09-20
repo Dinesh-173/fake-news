@@ -1,0 +1,84 @@
+{
+  "total_records": 12836,
+  "unique_original_labels": 6,
+  "unique_normalized_labels": 3,
+  "original_distribution": {
+    "false": 2511,
+    "half-true": 2638,
+    "mostly-true": 2466,
+    "true": 2063,
+    "barely-true": 2108,
+    "pants-fire": 1050
+  },
+  "original_percentages": {
+    "false": 19.56,
+    "half-true": 20.55,
+    "mostly-true": 19.21,
+    "true": 16.07,
+    "barely-true": 16.42,
+    "pants-fire": 8.18
+  },
+  "normalized_distribution": {
+    "LIKELY_FALSE": 3561,
+    "MISLEADING_OR_PARTIALLY_SUPPORTED": 4746,
+    "LIKELY_TRUE": 4529
+  },
+  "normalized_percentages": {
+    "LIKELY_FALSE": 27.74,
+    "MISLEADING_OR_PARTIALLY_SUPPORTED": 36.97,
+    "LIKELY_TRUE": 35.28
+  },
+  "mapping_breakdown": [
+    {
+      "original_label": "half-true",
+      "normalized_label": "MISLEADING_OR_PARTIALLY_SUPPORTED",
+      "status": "mapped",
+      "count": 2638,
+      "percentage": 20.55
+    },
+    {
+      "original_label": "false",
+      "normalized_label": "LIKELY_FALSE",
+      "status": "mapped",
+      "count": 2511,
+      "percentage": 19.56
+    },
+    {
+      "original_label": "mostly-true",
+      "normalized_label": "LIKELY_TRUE",
+      "status": "mapped",
+      "count": 2466,
+      "percentage": 19.21
+    },
+    {
+      "original_label": "barely-true",
+      "normalized_label": "MISLEADING_OR_PARTIALLY_SUPPORTED",
+      "status": "mapped",
+      "count": 2108,
+      "percentage": 16.42
+    },
+    {
+      "original_label": "true",
+      "normalized_label": "LIKELY_TRUE",
+      "status": "mapped",
+      "count": 2063,
+      "percentage": 16.07
+    },
+    {
+      "original_label": "pants-fire",
+      "normalized_label": "LIKELY_FALSE",
+      "status": "mapped",
+      "count": 1050,
+      "percentage": 8.18
+    }
+  ],
+  "mapping_coverage": 1.0,
+  "unresolved_count": 0,
+  "unresolved_labels": [],
+  "majority_class": "MISLEADING_OR_PARTIALLY_SUPPORTED",
+  "majority_class_percentage": 36.97,
+  "minority_class": "LIKELY_FALSE",
+  "minority_class_percentage": 27.74,
+  "imbalance_ratio": 1.33,
+  "normalized_entropy": 0.9932
+}

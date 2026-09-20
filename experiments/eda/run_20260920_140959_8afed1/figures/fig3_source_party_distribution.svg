@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 480" width="100%" height="100%" style="background:#ffffff; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+<rect width="920" height="480" fill="#FFFFFF" />
+<text x="90" y="35" font-size="20" font-weight="700" fill="#0F172A">Figure 3: Prominent Statement Originators &amp; Speaker Concentration</text>
+<text x="90" y="56" font-size="12" fill="#64748B">Top 8 Speakers across 5,162 distinct sources (Top-5 Concentration Share: 10.8%, HHI: 39.94)</text>
+<line x1="90" y1="390.0" x2="870" y2="390.0" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="3,3" />
+<text x="78" y="394.0" font-size="11" fill="#64748B" text-anchor="end">0</text>
+<line x1="90" y1="328.0" x2="870" y2="328.0" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="3,3" />
+<text x="78" y="332.0" font-size="11" fill="#64748B" text-anchor="end">80</text>
+<line x1="90" y1="266.0" x2="870" y2="266.0" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="3,3" />
+<text x="78" y="270.0" font-size="11" fill="#64748B" text-anchor="end">160</text>
+<line x1="90" y1="204.0" x2="870" y2="204.0" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="3,3" />
+<text x="78" y="208.0" font-size="11" fill="#64748B" text-anchor="end">240</text>
+<line x1="90" y1="142.0" x2="870" y2="142.0" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="3,3" />
+<text x="78" y="146.0" font-size="11" fill="#64748B" text-anchor="end">320</text>
+<line x1="90" y1="80.0" x2="870" y2="80.0" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="3,3" />
+<text x="78" y="84.0" font-size="11" fill="#64748B" text-anchor="end">400</text>
+<line x1="90" y1="80" x2="90" y2="390" stroke="#94A3B8" stroke-width="1.5" />
+<line x1="90" y1="390" x2="870" y2="390" stroke="#94A3B8" stroke-width="1.5" />
+<rect x="107.1" y="143.5" width="63.4" height="246.5" rx="3" fill="#1E40AF" />
+<text x="138.8" y="135.5" font-size="11" font-weight="600" fill="#1E293B" text-anchor="middle">318</text>
+<text x="138.8" y="412.0" font-size="11" fill="#334155" text-anchor="middle">a news release</text>
+<rect x="204.6" y="167.6" width="63.4" height="222.4" rx="3" fill="#2563EB" />
+<text x="236.2" y="159.6" font-size="11" font-weight="600" fill="#1E293B" text-anchor="middle">287</text>
+<text x="236.2" y="412.0" font-size="11" fill="#334155" text-anchor="middle">an interview</text>
+<rect x="302.1" y="168.4" width="63.4" height="221.6" rx="3" fill="#3B82F6" />
+<text x="333.8" y="160.4" font-size="11" font-weight="600" fill="#1E293B" text-anchor="middle">286</text>
+<text x="333.8" y="412.0" font-size="11" fill="#334155" text-anchor="middle">a press release</text>
+<rect x="399.6" y="183.1" width="63.4" height="206.9" rx="3" fill="#60A5FA" />
+<text x="431.2" y="175.1" font-size="11" font-weight="600" fill="#1E293B" text-anchor="middle">267</text>
+<text x="431.2" y="412.0" font-size="11" fill="#334155" text-anchor="middle">a speech</text>
+<rect x="497.1" y="212.5" width="63.4" height="177.5" rx="3" fill="#93C5FD" />
+<text x="528.8" y="204.5" font-size="11" font-weight="600" fill="#1E293B" text-anchor="middle">229</text>
+<text x="528.8" y="412.0" font-size="11" fill="#334155" text-anchor="middle">a TV ad</text>
+<rect x="594.6" y="242.0" width="63.4" height="148.0" rx="3" fill="#BFDBFE" />
+<text x="626.2" y="234.0" font-size="11" font-weight="600" fill="#1E293B" text-anchor="middle">191</text>
+<text x="626.2" y="412.0" font-size="11" fill="#334155" text-anchor="middle">a tweet</text>
+<rect x="692.1" y="262.1" width="63.4" height="127.9" rx="3" fill="#DBEAFE" />
+<text x="723.8" y="254.1" font-size="11" font-weight="600" fill="#1E293B" text-anchor="middle">165</text>
+<text x="723.8" y="412.0" font-size="11" fill="#334155" text-anchor="middle">a campaign ad</text>
+<rect x="789.6" y="264.4" width="63.4" height="125.6" rx="3" fill="#EFF6FF" />
+<text x="821.2" y="256.4" font-size="11" font-weight="600" fill="#1E293B" text-anchor="middle">162</text>
+<text x="821.2" y="412.0" font-size="11" fill="#334155" text-anchor="middle">a television ad</text>
+<text x="460.0" y="460" font-size="12" font-weight="600" fill="#475569" text-anchor="middle">Speaker / Originator</text>
+<text transform="rotate(-90)" x="-235.0" y="24" font-size="12" font-weight="600" fill="#475569" text-anchor="middle">Record Count</text>
+</svg>

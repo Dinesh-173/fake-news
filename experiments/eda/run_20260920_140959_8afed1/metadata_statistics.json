@@ -1,0 +1,561 @@
+{
+  "total_records": 12836,
+  "metadata_fields_profiled": [
+    "author",
+    "source_name_raw",
+    "source_domain",
+    "speaker",
+    "party_affiliation",
+    "context",
+    "state_info",
+    "subjects",
+    "job_title"
+  ],
+  "field_summaries": {
+    "author": {
+      "field_name": "author",
+      "available_count": 12836,
+      "missing_count": 0,
+      "missing_percentage": 0.0,
+      "unique_values": 3318,
+      "normalized_entropy": 0.8289,
+      "top_values": [
+        {
+          "value": "barack-obama",
+          "count": 616,
+          "percentage": 4.8
+        },
+        {
+          "value": "donald-trump",
+          "count": 344,
+          "percentage": 2.68
+        },
+        {
+          "value": "hillary-clinton",
+          "count": 297,
+          "percentage": 2.31
+        },
+        {
+          "value": "mitt-romney",
+          "count": 216,
+          "percentage": 1.68
+        },
+        {
+          "value": "john-mccain",
+          "count": 189,
+          "percentage": 1.47
+        },
+        {
+          "value": "scott-walker",
+          "count": 184,
+          "percentage": 1.43
+        },
+        {
+          "value": "chain-email",
+          "count": 178,
+          "percentage": 1.39
+        },
+        {
+          "value": "rick-perry",
+          "count": 173,
+          "percentage": 1.35
+        },
+        {
+          "value": "marco-rubio",
+          "count": 153,
+          "percentage": 1.19
+        },
+        {
+          "value": "rick-scott",
+          "count": 150,
+          "percentage": 1.17
+        }
+      ]
+    },
+    "source_name_raw": {
+      "field_name": "source_name_raw",
+      "available_count": 12836,
+      "missing_count": 0,
+      "missing_percentage": 0.0,
+      "unique_values": 5163,
+      "normalized_entropy": 0.8561,
+      "top_values": [
+        {
+          "value": "a news release",
+          "count": 318,
+          "percentage": 2.48
+        },
+        {
+          "value": "an interview",
+          "count": 287,
+          "percentage": 2.24
+        },
+        {
+          "value": "a press release",
+          "count": 286,
+          "percentage": 2.23
+        },
+        {
+          "value": "a speech",
+          "count": 267,
+          "percentage": 2.08
+        },
+        {
+          "value": "a TV ad",
+          "count": 229,
+          "percentage": 1.78
+        },
+        {
+          "value": "a tweet",
+          "count": 191,
+          "percentage": 1.49
+        },
+        {
+          "value": "a campaign ad",
+          "count": 165,
+          "percentage": 1.29
+        },
+        {
+          "value": "a television ad",
+          "count": 162,
+          "percentage": 1.26
+        },
+        {
+          "value": "a radio interview",
+          "count": 129,
+          "percentage": 1.0
+        },
+        {
+          "value": "a debate",
+          "count": 118,
+          "percentage": 0.92
+        }
+      ]
+    },
+    "source_domain": {
+      "field_name": "source_domain",
+      "available_count": 244,
+      "missing_count": 12592,
+      "missing_percentage": 98.1,
+      "unique_values": 190,
+      "normalized_entropy": 0.9603,
+      "top_values": [
+        {
+          "value": "a u.s. senate debate",
+          "count": 14,
+          "percentage": 0.11
+        },
+        {
+          "value": "a speech on the floor of the u.s. senate",
+          "count": 7,
+          "percentage": 0.05
+        },
+        {
+          "value": "a u.s. senate primary debate on fox news sunday",
+          "count": 6,
+          "percentage": 0.05
+        },
+        {
+          "value": "a column posted on medium.com",
+          "count": 6,
+          "percentage": 0.05
+        },
+        {
+          "value": "st. louis",
+          "count": 5,
+          "percentage": 0.04
+        },
+        {
+          "value": "the dec. 19 democratic presidential debate",
+          "count": 3,
+          "percentage": 0.02
+        },
+        {
+          "value": "an op-ed on northjersey.com",
+          "count": 3,
+          "percentage": 0.02
+        },
+        {
+          "value": "an interview on wcpn 90.3 fm",
+          "count": 3,
+          "percentage": 0.02
+        },
+        {
+          "value": "a debate in st. petersburg",
+          "count": 3,
+          "percentage": 0.02
+        },
+        {
+          "value": "a column on bluejersey.com",
+          "count": 3,
+          "percentage": 0.02
+        }
+      ]
+    },
+    "speaker": {
+      "field_name": "speaker",
+      "available_count": 12836,
+      "missing_count": 0,
+      "missing_percentage": 0.0,
+      "unique_values": 3318,
+      "normalized_entropy": 0.8289,
+      "top_values": [
+        {
+          "value": "barack-obama",
+          "count": 616,
+          "percentage": 4.8
+        },
+        {
+          "value": "donald-trump",
+          "count": 344,
+          "percentage": 2.68
+        },
+        {
+          "value": "hillary-clinton",
+          "count": 297,
+          "percentage": 2.31
+        },
+        {
+          "value": "mitt-romney",
+          "count": 216,
+          "percentage": 1.68
+        },
+        {
+          "value": "john-mccain",
+          "count": 189,
+          "percentage": 1.47
+        },
+        {
+          "value": "scott-walker",
+          "count": 184,
+          "percentage": 1.43
+        },
+        {
+          "value": "chain-email",
+          "count": 178,
+          "percentage": 1.39
+        },
+        {
+          "value": "rick-perry",
+          "count": 173,
+          "percentage": 1.35
+        },
+        {
+          "value": "marco-rubio",
+          "count": 153,
+          "percentage": 1.19
+        },
+        {
+          "value": "rick-scott",
+          "count": 150,
+          "percentage": 1.17
+        }
+      ]
+    },
+    "party_affiliation": {
+      "field_name": "party_affiliation",
+      "available_count": 10651,
+      "missing_count": 2185,
+      "missing_percentage": 17.02,
+      "unique_values": 23,
+      "normalized_entropy": 0.3382,
+      "top_values": [
+        {
+          "value": "republican",
+          "count": 5687,
+          "percentage": 44.31
+        },
+        {
+          "value": "democrat",
+          "count": 4150,
+          "percentage": 32.33
+        },
+        {
+          "value": "organization",
+          "count": 265,
+          "percentage": 2.06
+        },
+        {
+          "value": "independent",
+          "count": 182,
+          "percentage": 1.42
+        },
+        {
+          "value": "newsmaker",
+          "count": 66,
+          "percentage": 0.51
+        },
+        {
+          "value": "libertarian",
+          "count": 51,
+          "percentage": 0.4
+        },
+        {
+          "value": "journalist",
+          "count": 49,
+          "percentage": 0.38
+        },
+        {
+          "value": "activist",
+          "count": 47,
+          "percentage": 0.37
+        },
+        {
+          "value": "columnist",
+          "count": 45,
+          "percentage": 0.35
+        },
+        {
+          "value": "talk-show-host",
+          "count": 32,
+          "percentage": 0.25
+        }
+      ]
+    },
+    "context": {
+      "field_name": "context",
+      "available_count": 12707,
+      "missing_count": 129,
+      "missing_percentage": 1.0,
+      "unique_values": 5079,
+      "normalized_entropy": 0.8549,
+      "top_values": [
+        {
+          "value": "a news release",
+          "count": 318,
+          "percentage": 2.48
+        },
+        {
+          "value": "an interview",
+          "count": 287,
+          "percentage": 2.24
+        },
+        {
+          "value": "a press release",
+          "count": 286,
+          "percentage": 2.23
+        },
+        {
+          "value": "a speech",
+          "count": 267,
+          "percentage": 2.08
+        },
+        {
+          "value": "a TV ad",
+          "count": 229,
+          "percentage": 1.78
+        },
+        {
+          "value": "a tweet",
+          "count": 191,
+          "percentage": 1.49
+        },
+        {
+          "value": "a campaign ad",
+          "count": 165,
+          "percentage": 1.29
+        },
+        {
+          "value": "a television ad",
+          "count": 162,
+          "percentage": 1.26
+        },
+        {
+          "value": "a radio interview",
+          "count": 129,
+          "percentage": 1.0
+        },
+        {
+          "value": "a debate",
+          "count": 118,
+          "percentage": 0.92
+        }
+      ]
+    },
+    "state_info": {
+      "field_name": "state_info",
+      "available_count": 10085,
+      "missing_count": 2751,
+      "missing_percentage": 21.43,
+      "unique_values": 72,
+      "normalized_entropy": 0.7199,
+      "top_values": [
+        {
+          "value": "Texas",
+          "count": 1263,
+          "percentage": 9.84
+        },
+        {
+          "value": "Florida",
+          "count": 1241,
+          "percentage": 9.67
+        },
+        {
+          "value": "Wisconsin",
+          "count": 906,
+          "percentage": 7.06
+        },
+        {
+          "value": "New York",
+          "count": 834,
+          "percentage": 6.5
+        },
+        {
+          "value": "Illinois",
+          "count": 701,
+          "percentage": 5.46
+        },
+        {
+          "value": "Ohio",
+          "count": 587,
+          "percentage": 4.57
+        },
+        {
+          "value": "Georgia",
+          "count": 555,
+          "percentage": 4.32
+        },
+        {
+          "value": "Virginia",
+          "count": 516,
+          "percentage": 4.02
+        },
+        {
+          "value": "Rhode Island",
+          "count": 456,
+          "percentage": 3.55
+        },
+        {
+          "value": "Oregon",
+          "count": 310,
+          "percentage": 2.42
+        }
+      ]
+    },
+    "subjects": {
+      "field_name": "subjects",
+      "available_count": 12836,
+      "missing_count": 0,
+      "missing_percentage": 0.0,
+      "unique_values": 4547,
+      "normalized_entropy": 0.8281,
+      "top_values": [
+        {
+          "value": "health-care",
+          "count": 475,
+          "percentage": 3.7
+        },
+        {
+          "value": "taxes",
+          "count": 356,
+          "percentage": 2.77
+        },
+        {
+          "value": "education",
+          "count": 310,
+          "percentage": 2.42
+        },
+        {
+          "value": "elections",
+          "count": 306,
+          "percentage": 2.38
+        },
+        {
+          "value": "immigration",
+          "count": 303,
+          "percentage": 2.36
+        },
+        {
+          "value": "candidates-biography",
+          "count": 240,
+          "percentage": 1.87
+        },
+        {
+          "value": "economy",
+          "count": 171,
+          "percentage": 1.33
+        },
+        {
+          "value": "federal-budget",
+          "count": 153,
+          "percentage": 1.19
+        },
+        {
+          "value": "economy,jobs",
+          "count": 152,
+          "percentage": 1.18
+        },
+        {
+          "value": "guns",
+          "count": 152,
+          "percentage": 1.18
+        }
+      ]
+    },
+    "job_title": {
+      "field_name": "job_title",
+      "available_count": 9258,
+      "missing_count": 3578,
+      "missing_percentage": 27.87,
+      "unique_values": 1349,
+      "normalized_entropy": 0.7264,
+      "top_values": [
+        {
+          "value": "President",
+          "count": 620,
+          "percentage": 4.83
+        },
+        {
+          "value": "U.S. Senator",
+          "count": 596,
+          "percentage": 4.64
+        },
+        {
+          "value": "Governor",
+          "count": 487,
+          "percentage": 3.79
+        },
+        {
+          "value": "President-Elect",
+          "count": 344,
+          "percentage": 2.68
+        },
+        {
+          "value": "U.S. senator",
+          "count": 328,
+          "percentage": 2.56
+        },
+        {
+          "value": "Presidential candidate",
+          "count": 314,
+          "percentage": 2.45
+        },
+        {
+          "value": "U.S. Representative",
+          "count": 220,
+          "percentage": 1.71
+        },
+        {
+          "value": "Former governor",
+          "count": 216,
+          "percentage": 1.68
+        },
+        {
+          "value": "Senator",
+          "count": 195,
+          "percentage": 1.52
+        },
+        {
+          "value": "Milwaukee County Executive",
+          "count": 184,
+          "percentage": 1.43
+        }
+      ]
+    }
+  },
+  "overall_completeness_ratio": 0.8162,
+  "notes": [
+    "Profiled 9 distinct metadata fields across 12836 records.",
+    "Mean field-level attribute availability is 81.62%."
+  ]
+}

@@ -1,0 +1,221 @@
+{
+  "total_records": 12836,
+  "unique_sources": 5162,
+  "unique_domains": 191,
+  "top_publishers": [
+    {
+      "name": "a news release",
+      "count": 318,
+      "percentage": 2.48
+    },
+    {
+      "name": "an interview",
+      "count": 287,
+      "percentage": 2.24
+    },
+    {
+      "name": "a press release",
+      "count": 286,
+      "percentage": 2.23
+    },
+    {
+      "name": "a speech",
+      "count": 267,
+      "percentage": 2.08
+    },
+    {
+      "name": "a TV ad",
+      "count": 229,
+      "percentage": 1.78
+    },
+    {
+      "name": "a tweet",
+      "count": 191,
+      "percentage": 1.49
+    },
+    {
+      "name": "a campaign ad",
+      "count": 165,
+      "percentage": 1.29
+    },
+    {
+      "name": "a television ad",
+      "count": 162,
+      "percentage": 1.26
+    },
+    {
+      "name": "a radio interview",
+      "count": 129,
+      "percentage": 1.0
+    },
+    {
+      "name": "a debate",
+      "count": 118,
+      "percentage": 0.92
+    },
+    {
+      "name": "a news conference",
+      "count": 108,
+      "percentage": 0.84
+    },
+    {
+      "name": "a campaign commercial",
+      "count": 93,
+      "percentage": 0.72
+    },
+    {
+      "name": "a Facebook post",
+      "count": 88,
+      "percentage": 0.69
+    },
+    {
+      "name": "a press conference",
+      "count": 88,
+      "percentage": 0.69
+    },
+    {
+      "name": "a television interview",
+      "count": 84,
+      "percentage": 0.65
+    }
+  ],
+  "top_domains": [
+    {
+      "name": "UNKNOWN_DOMAIN",
+      "count": 12592,
+      "percentage": 98.1
+    },
+    {
+      "name": "a u.s. senate debate",
+      "count": 14,
+      "percentage": 0.11
+    },
+    {
+      "name": "a speech on the floor of the u.s. senate",
+      "count": 7,
+      "percentage": 0.05
+    },
+    {
+      "name": "a u.s. senate primary debate on fox news sunday",
+      "count": 6,
+      "percentage": 0.05
+    },
+    {
+      "name": "a column posted on medium.com",
+      "count": 6,
+      "percentage": 0.05
+    },
+    {
+      "name": "st. louis",
+      "count": 5,
+      "percentage": 0.04
+    },
+    {
+      "name": "the dec. 19 democratic presidential debate",
+      "count": 3,
+      "percentage": 0.02
+    },
+    {
+      "name": "an op-ed on northjersey.com",
+      "count": 3,
+      "percentage": 0.02
+    },
+    {
+      "name": "an interview on wcpn 90.3 fm",
+      "count": 3,
+      "percentage": 0.02
+    },
+    {
+      "name": "a debate in st. petersburg",
+      "count": 3,
+      "percentage": 0.02
+    },
+    {
+      "name": "a column on bluejersey.com",
+      "count": 3,
+      "percentage": 0.02
+    },
+    {
+      "name": "a blog post on redstate.com",
+      "count": 2,
+      "percentage": 0.02
+    },
+    {
+      "name": "the florida u.s. senate debate",
+      "count": 2,
+      "percentage": 0.02
+    },
+    {
+      "name": "a radio interview on new jersey 101.5’s “ask the governor”",
+      "count": 2,
+      "percentage": 0.02
+    },
+    {
+      "name": "a u.s. congressional campaign debate",
+      "count": 2,
+      "percentage": 0.02
+    }
+  ],
+  "top_5_share": 10.81,
+  "top_10_share": 16.77,
+  "herfindahl_index": 39.94,
+  "normalized_hhi": 0.0038,
+  "source_label_contingency": {
+    "a news release": {
+      "LIKELY_FALSE": 90,
+      "MISLEADING_OR_PARTIALLY_SUPPORTED": 123,
+      "LIKELY_TRUE": 105
+    },
+    "an interview": {
+      "MISLEADING_OR_PARTIALLY_SUPPORTED": 102,
+      "LIKELY_FALSE": 82,
+      "LIKELY_TRUE": 103
+    },
+    "a press release": {
+      "MISLEADING_OR_PARTIALLY_SUPPORTED": 109,
+      "LIKELY_FALSE": 61,
+      "LIKELY_TRUE": 116
+    },
+    "a speech": {
+      "LIKELY_TRUE": 121,
+      "MISLEADING_OR_PARTIALLY_SUPPORTED": 94,
+      "LIKELY_FALSE": 52
+    },
+    "a TV ad": {
+      "MISLEADING_OR_PARTIALLY_SUPPORTED": 104,
+      "LIKELY_TRUE": 71,
+      "LIKELY_FALSE": 54
+    },
+    "a tweet": {
+      "MISLEADING_OR_PARTIALLY_SUPPORTED": 56,
+      "LIKELY_FALSE": 61,
+      "LIKELY_TRUE": 74
+    },
+    "a campaign ad": {
+      "LIKELY_FALSE": 32,
+      "MISLEADING_OR_PARTIALLY_SUPPORTED": 97,
+      "LIKELY_TRUE": 36
+    },
+    "a television ad": {
+      "LIKELY_FALSE": 38,
+      "MISLEADING_OR_PARTIALLY_SUPPORTED": 90,
+      "LIKELY_TRUE": 34
+    },
+    "a radio interview": {
+      "MISLEADING_OR_PARTIALLY_SUPPORTED": 45,
+      "LIKELY_TRUE": 43,
+      "LIKELY_FALSE": 41
+    },
+    "a debate": {
+      "LIKELY_TRUE": 43,
+      "LIKELY_FALSE": 30,
+      "MISLEADING_OR_PARTIALLY_SUPPORTED": 45
+    }
+  },
+  "notes": [
+    "Dataset encompasses 5162 distinct sources/speakers and 191 domain entries.",
+    "Top-5 sources account for 10.81% of all records; top-10 account for 16.77%.",
+    "Observed Herfindahl-Hirschman Index is 39.94 (Normalized: 0.0038).",
+    "Source distribution shows broad dispersion across a wide diversity of originators."
+  ]
+}

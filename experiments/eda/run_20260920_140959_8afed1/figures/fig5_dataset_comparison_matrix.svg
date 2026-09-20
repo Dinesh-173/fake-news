@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="100%" height="100%" style="background:#ffffff; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+<rect width="900" height="500" fill="#FFFFFF" />
+<text x="50" y="38" font-size="20" font-weight="700" fill="#0F172A">Figure 5: TruthLens Benchmark Comparison Matrix</text>
+<text x="50" y="60" font-size="12" fill="#64748B">Systematic empirical inspection of candidate benchmarks across research dimensions</text>
+<rect x="40" y="75" width="820" height="32" fill="#F1F5F9" rx="4" />
+<text x="50" y="95" font-size="12" font-weight="700" fill="#1E293B">Dimension</text>
+<text x="240" y="95" font-size="12" font-weight="700" fill="#1E293B">LIAR (ACL '17)</text>
+<text x="410" y="95" font-size="12" font-weight="700" fill="#1E293B">FakeNewsNet ('19)</text>
+<text x="580" y="95" font-size="12" font-weight="700" fill="#1E293B">Fakeddit ('20)</text>
+<text x="750" y="95" font-size="12" font-weight="700" fill="#1E293B">NELA-GT ('22)</text>
+<rect x="40" y="115" width="820" height="40" fill="#FFFFFF" />
+<line x1="40" y1="155" x2="860" y2="155" stroke="#E2E8F0" stroke-width="1" />
+<text x="50" y="140" font-size="11" font-weight="600" fill="#334155">Acquisition Status</text>
+<text x="240" y="140" font-size="11" font-weight="600" fill="#047857">AVAILABLE LOCALLY</text>
+<text x="410" y="140" font-size="11" font-weight="400" fill="#94A3B8">NOT ACQUIRED</text>
+<text x="580" y="140" font-size="11" font-weight="400" fill="#94A3B8">NOT ACQUIRED</text>
+<text x="750" y="140" font-size="11" font-weight="400" fill="#94A3B8">NOT ACQUIRED</text>
+<rect x="40" y="155" width="820" height="40" fill="#F8FAFC" />
+<line x1="40" y1="195" x2="860" y2="195" stroke="#E2E8F0" stroke-width="1" />
+<text x="50" y="180" font-size="11" font-weight="600" fill="#334155">Verified Records</text>
+<text x="240" y="180" font-size="11" font-weight="600" fill="#047857">12,836 (Measured)</text>
+<text x="410" y="180" font-size="11" font-weight="400" fill="#94A3B8">N/A (Pending)</text>
+<text x="580" y="180" font-size="11" font-weight="400" fill="#94A3B8">N/A (Pending)</text>
+<text x="750" y="180" font-size="11" font-weight="400" fill="#94A3B8">N/A (Pending)</text>
+<rect x="40" y="195" width="820" height="40" fill="#FFFFFF" />
+<line x1="40" y1="235" x2="860" y2="235" stroke="#E2E8F0" stroke-width="1" />
+<text x="50" y="220" font-size="11" font-weight="600" fill="#334155">Primary Modality</text>
+<text x="240" y="220" font-size="11" font-weight="400" fill="#0F172A">Textual Statements</text>
+<text x="410" y="220" font-size="11" font-weight="400" fill="#0F172A">Articles + Social</text>
+<text x="580" y="220" font-size="11" font-weight="400" fill="#0F172A">Multimodal Reddit</text>
+<text x="750" y="220" font-size="11" font-weight="400" fill="#0F172A">News Articles</text>
+<rect x="40" y="235" width="820" height="40" fill="#F8FAFC" />
+<line x1="40" y1="275" x2="860" y2="275" stroke="#E2E8F0" stroke-width="1" />
+<text x="50" y="260" font-size="11" font-weight="600" fill="#334155">Local Image Assets</text>
+<text x="240" y="260" font-size="11" font-weight="400" fill="#0F172A">None (TSV Format)</text>
+<text x="410" y="260" font-size="11" font-weight="400" fill="#0F172A">Pending Hydration</text>
+<text x="580" y="260" font-size="11" font-weight="400" fill="#0F172A">Pending Download</text>
+<text x="750" y="260" font-size="11" font-weight="400" fill="#0F172A">Text/HTML Only</text>
+<rect x="40" y="275" width="820" height="40" fill="#FFFFFF" />
+<line x1="40" y1="315" x2="860" y2="315" stroke="#E2E8F0" stroke-width="1" />
+<text x="50" y="300" font-size="11" font-weight="600" fill="#334155">Granular Labels</text>
+<text x="240" y="300" font-size="11" font-weight="400" fill="#0F172A">6-Class Veracity</text>
+<text x="410" y="300" font-size="11" font-weight="400" fill="#0F172A">Binary (Real/Fake)</text>
+<text x="580" y="300" font-size="11" font-weight="400" fill="#0F172A">2-way & 6-way</text>
+<text x="750" y="300" font-size="11" font-weight="400" fill="#0F172A">Continuous Scores</text>
+<rect x="40" y="315" width="820" height="40" fill="#F8FAFC" />
+<line x1="40" y1="355" x2="860" y2="355" stroke="#E2E8F0" stroke-width="1" />
+<text x="50" y="340" font-size="11" font-weight="600" fill="#334155">Speaker Metadata</text>
+<text x="240" y="340" font-size="11" font-weight="400" fill="#0F172A">Speaker, Party, Job</text>
+<text x="410" y="340" font-size="11" font-weight="400" fill="#0F172A">Twitter Context</text>
+<text x="580" y="340" font-size="11" font-weight="400" fill="#0F172A">Subreddit, Author</text>
+<text x="750" y="340" font-size="11" font-weight="400" fill="#0F172A">Outlet Identity</text>
+<rect x="40" y="355" width="820" height="40" fill="#FFFFFF" />
+<line x1="40" y1="395" x2="860" y2="395" stroke="#E2E8F0" stroke-width="1" />
+<text x="50" y="380" font-size="11" font-weight="600" fill="#334155">Duplicate Handling</text>
+<text x="240" y="380" font-size="11" font-weight="400" fill="#0F172A">Exact & Near Jaccard</text>
+<text x="410" y="380" font-size="11" font-weight="400" fill="#0F172A">Unprocessed</text>
+<text x="580" y="380" font-size="11" font-weight="400" fill="#0F172A">Unprocessed</text>
+<text x="750" y="380" font-size="11" font-weight="400" fill="#0F172A">Unprocessed</text>
+<rect x="40" y="395" width="820" height="40" fill="#F8FAFC" />
+<line x1="40" y1="435" x2="860" y2="435" stroke="#E2E8F0" stroke-width="1" />
+<text x="50" y="420" font-size="11" font-weight="600" fill="#334155">Leakage Protection</text>
+<text x="240" y="420" font-size="11" font-weight="400" fill="#0F172A">Zero-Leakage Split</text>
+<text x="410" y="420" font-size="11" font-weight="400" fill="#0F172A">Pending Split</text>
+<text x="580" y="420" font-size="11" font-weight="400" fill="#0F172A">Pending Split</text>
+<text x="750" y="420" font-size="11" font-weight="400" fill="#0F172A">Pending Split</text>
+</svg>

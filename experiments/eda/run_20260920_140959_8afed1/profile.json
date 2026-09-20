@@ -1,0 +1,1362 @@
+{
+  "run_id": "run_20260920_140959_8afed1",
+  "dataset_name": "liar",
+  "dataset_version": "v1.0.0 (ACL 2017)",
+  "created_at_utc": "2026-09-20T14:10:00.238054+00:00",
+  "total_records": 12836,
+  "environment_provenance": {
+    "python_version": "3.14.7",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "git_commit": "f64a5a6f3cfa799e76d3e292c0ccbf28af74bf89",
+    "packages": {
+      "numpy": "2.5.1",
+      "pandas": "3.0.5",
+      "scipy": "1.18.0",
+      "pydantic": "2.13.4",
+      "scikit-learn": "1.9.0"
+    },
+    "random_seed": 42
+  },
+  "dataset_file_hashes": {
+    "train": "23ef8cb7ff57b25c941100d0744039cebc595d65a67ea190f72b330a658d8c36",
+    "valid": "8dd3d7ed1a11e78ed7df090c9eddb0f91147f895850c78d49dd7b4e88fd09a16",
+    "test": "ee41e2c741e0019216952625145af8c4aa8c8d3057ec68284b134267bb845e6f"
+  },
+  "label_analysis": {
+    "total_records": 12836,
+    "unique_original_labels": 6,
+    "unique_normalized_labels": 3,
+    "original_distribution": {
+      "false": 2511,
+      "half-true": 2638,
+      "mostly-true": 2466,
+      "true": 2063,
+      "barely-true": 2108,
+      "pants-fire": 1050
+    },
+    "original_percentages": {
+      "false": 19.56,
+      "half-true": 20.55,
+      "mostly-true": 19.21,
+      "true": 16.07,
+      "barely-true": 16.42,
+      "pants-fire": 8.18
+    },
+    "normalized_distribution": {
+      "LIKELY_FALSE": 3561,
+      "MISLEADING_OR_PARTIALLY_SUPPORTED": 4746,
+      "LIKELY_TRUE": 4529
+    },
+    "normalized_percentages": {
+      "LIKELY_FALSE": 27.74,
+      "MISLEADING_OR_PARTIALLY_SUPPORTED": 36.97,
+      "LIKELY_TRUE": 35.28
+    },
+    "mapping_breakdown": [
+      {
+        "original_label": "half-true",
+        "normalized_label": "MISLEADING_OR_PARTIALLY_SUPPORTED",
+        "status": "mapped",
+        "count": 2638,
+        "percentage": 20.55
+      },
+      {
+        "original_label": "false",
+        "normalized_label": "LIKELY_FALSE",
+        "status": "mapped",
+        "count": 2511,
+        "percentage": 19.56
+      },
+      {
+        "original_label": "mostly-true",
+        "normalized_label": "LIKELY_TRUE",
+        "status": "mapped",
+        "count": 2466,
+        "percentage": 19.21
+      },
+      {
+        "original_label": "barely-true",
+        "normalized_label": "MISLEADING_OR_PARTIALLY_SUPPORTED",
+        "status": "mapped",
+        "count": 2108,
+        "percentage": 16.42
+      },
+      {
+        "original_label": "true",
+        "normalized_label": "LIKELY_TRUE",
+        "status": "mapped",
+        "count": 2063,
+        "percentage": 16.07
+      },
+      {
+        "original_label": "pants-fire",
+        "normalized_label": "LIKELY_FALSE",
+        "status": "mapped",
+        "count": 1050,
+        "percentage": 8.18
+      }
+    ],
+    "mapping_coverage": 1.0,
+    "unresolved_count": 0,
+    "unresolved_labels": [],
+    "majority_class": "MISLEADING_OR_PARTIALLY_SUPPORTED",
+    "majority_class_percentage": 36.97,
+    "minority_class": "LIKELY_FALSE",
+    "minority_class_percentage": 27.74,
+    "imbalance_ratio": 1.33,
+    "normalized_entropy": 0.9932
+  },
+  "text_analysis": {
+    "total_records": 12836,
+    "char_length_stats": {
+      "count": 12836,
+      "min": 11.0,
+      "max": 395.0,
+      "mean": 106.41,
+      "median": 99.0,
+      "std": 45.03,
+      "p5": 47.0,
+      "p25": 73.0,
+      "p50": 99.0,
+      "p75": 133.0,
+      "p95": 191.0,
+      "p99": 234.0
+    },
+    "token_length_stats": {
+      "count": 12836,
+      "min": 2.0,
+      "max": 88.0,
+      "mean": 21.06,
+      "median": 20.0,
+      "std": 9.01,
+      "p5": 9.0,
+      "p25": 14.0,
+      "p50": 20.0,
+      "p75": 26.0,
+      "p95": 38.0,
+      "p99": 48.0
+    },
+    "class_conditional_char_stats": {
+      "LIKELY_FALSE": {
+        "count": 3561,
+        "min": 11.0,
+        "max": 344.0,
+        "mean": 100.89,
+        "median": 93.0,
+        "std": 43.52,
+        "p5": 41.0,
+        "p25": 69.0,
+        "p50": 93.0,
+        "p75": 127.0,
+        "p95": 181.0,
+        "p99": 223.4
+      },
+      "LIKELY_TRUE": {
+        "count": 4529,
+        "min": 11.0,
+        "max": 395.0,
+        "mean": 106.73,
+        "median": 99.0,
+        "std": 44.13,
+        "p5": 50.0,
+        "p25": 74.0,
+        "p50": 99.0,
+        "p75": 132.0,
+        "p95": 189.0,
+        "p99": 232.72
+      },
+      "MISLEADING_OR_PARTIALLY_SUPPORTED": {
+        "count": 4746,
+        "min": 11.0,
+        "max": 391.0,
+        "mean": 110.24,
+        "median": 103.0,
+        "std": 46.55,
+        "p5": 48.0,
+        "p25": 76.0,
+        "p50": 103.0,
+        "p75": 137.0,
+        "p95": 196.75,
+        "p99": 246.55
+      }
+    },
+    "class_conditional_token_stats": {
+      "LIKELY_FALSE": {
+        "count": 3561,
+        "min": 2.0,
+        "max": 73.0,
+        "mean": 19.78,
+        "median": 18.0,
+        "std": 8.62,
+        "p5": 8.0,
+        "p25": 13.0,
+        "p50": 18.0,
+        "p75": 25.0,
+        "p95": 36.0,
+        "p99": 45.0
+      },
+      "LIKELY_TRUE": {
+        "count": 4529,
+        "min": 3.0,
+        "max": 88.0,
+        "mean": 21.33,
+        "median": 20.0,
+        "std": 8.87,
+        "p5": 10.0,
+        "p25": 15.0,
+        "p50": 20.0,
+        "p75": 26.0,
+        "p95": 38.0,
+        "p99": 48.0
+      },
+      "MISLEADING_OR_PARTIALLY_SUPPORTED": {
+        "count": 4746,
+        "min": 2.0,
+        "max": 71.0,
+        "mean": 21.75,
+        "median": 20.0,
+        "std": 9.31,
+        "p5": 9.0,
+        "p25": 15.0,
+        "p50": 20.0,
+        "p75": 27.0,
+        "p95": 39.0,
+        "p99": 49.0
+      }
+    },
+    "quality_flags": {
+      "empty_count": 0,
+      "whitespace_only_count": 0,
+      "extremely_short_count": 9,
+      "extremely_long_count": 0,
+      "excessive_punctuation_count": 2,
+      "excessive_urls_count": 0,
+      "repetitive_text_count": 3,
+      "total_flagged_records": 14
+    },
+    "quality_thresholds": {
+      "min_char_length": 15,
+      "max_char_length": 5000,
+      "max_punct_ratio": 0.25,
+      "max_url_count": 2,
+      "repetition_max_ratio": 0.5
+    },
+    "tokenizer_name": "Regex-based Word Tokenizer (\\b\\w+(?:'\\w+)?\\b|[^\\w\\s])"
+  },
+  "source_analysis": {
+    "total_records": 12836,
+    "unique_sources": 5162,
+    "unique_domains": 191,
+    "top_publishers": [
+      {
+        "name": "a news release",
+        "count": 318,
+        "percentage": 2.48
+      },
+      {
+        "name": "an interview",
+        "count": 287,
+        "percentage": 2.24
+      },
+      {
+        "name": "a press release",
+        "count": 286,
+        "percentage": 2.23
+      },
+      {
+        "name": "a speech",
+        "count": 267,
+        "percentage": 2.08
+      },
+      {
+        "name": "a TV ad",
+        "count": 229,
+        "percentage": 1.78
+      },
+      {
+        "name": "a tweet",
+        "count": 191,
+        "percentage": 1.49
+      },
+      {
+        "name": "a campaign ad",
+        "count": 165,
+        "percentage": 1.29
+      },
+      {
+        "name": "a television ad",
+        "count": 162,
+        "percentage": 1.26
+      },
+      {
+        "name": "a radio interview",
+        "count": 129,
+        "percentage": 1.0
+      },
+      {
+        "name": "a debate",
+        "count": 118,
+        "percentage": 0.92
+      },
+      {
+        "name": "a news conference",
+        "count": 108,
+        "percentage": 0.84
+      },
+      {
+        "name": "a campaign commercial",
+        "count": 93,
+        "percentage": 0.72
+      },
+      {
+        "name": "a Facebook post",
+        "count": 88,
+        "percentage": 0.69
+      },
+      {
+        "name": "a press conference",
+        "count": 88,
+        "percentage": 0.69
+      },
+      {
+        "name": "a television interview",
+        "count": 84,
+        "percentage": 0.65
+      }
+    ],
+    "top_domains": [
+      {
+        "name": "UNKNOWN_DOMAIN",
+        "count": 12592,
+        "percentage": 98.1
+      },
+      {
+        "name": "a u.s. senate debate",
+        "count": 14,
+        "percentage": 0.11
+      },
+      {
+        "name": "a speech on the floor of the u.s. senate",
+        "count": 7,
+        "percentage": 0.05
+      },
+      {
+        "name": "a u.s. senate primary debate on fox news sunday",
+        "count": 6,
+        "percentage": 0.05
+      },
+      {
+        "name": "a column posted on medium.com",
+        "count": 6,
+        "percentage": 0.05
+      },
+      {
+        "name": "st. louis",
+        "count": 5,
+        "percentage": 0.04
+      },
+      {
+        "name": "the dec. 19 democratic presidential debate",
+        "count": 3,
+        "percentage": 0.02
+      },
+      {
+        "name": "an op-ed on northjersey.com",
+        "count": 3,
+        "percentage": 0.02
+      },
+      {
+        "name": "an interview on wcpn 90.3 fm",
+        "count": 3,
+        "percentage": 0.02
+      },
+      {
+        "name": "a debate in st. petersburg",
+        "count": 3,
+        "percentage": 0.02
+      },
+      {
+        "name": "a column on bluejersey.com",
+        "count": 3,
+        "percentage": 0.02
+      },
+      {
+        "name": "a blog post on redstate.com",
+        "count": 2,
+        "percentage": 0.02
+      },
+      {
+        "name": "the florida u.s. senate debate",
+        "count": 2,
+        "percentage": 0.02
+      },
+      {
+        "name": "a radio interview on new jersey 101.5’s “ask the governor”",
+        "count": 2,
+        "percentage": 0.02
+      },
+      {
+        "name": "a u.s. congressional campaign debate",
+        "count": 2,
+        "percentage": 0.02
+      }
+    ],
+    "top_5_share": 10.81,
+    "top_10_share": 16.77,
+    "herfindahl_index": 39.94,
+    "normalized_hhi": 0.0038,
+    "source_label_contingency": {
+      "a news release": {
+        "LIKELY_FALSE": 90,
+        "MISLEADING_OR_PARTIALLY_SUPPORTED": 123,
+        "LIKELY_TRUE": 105
+      },
+      "an interview": {
+        "MISLEADING_OR_PARTIALLY_SUPPORTED": 102,
+        "LIKELY_FALSE": 82,
+        "LIKELY_TRUE": 103
+      },
+      "a press release": {
+        "MISLEADING_OR_PARTIALLY_SUPPORTED": 109,
+        "LIKELY_FALSE": 61,
+        "LIKELY_TRUE": 116
+      },
+      "a speech": {
+        "LIKELY_TRUE": 121,
+        "MISLEADING_OR_PARTIALLY_SUPPORTED": 94,
+        "LIKELY_FALSE": 52
+      },
+      "a TV ad": {
+        "MISLEADING_OR_PARTIALLY_SUPPORTED": 104,
+        "LIKELY_TRUE": 71,
+        "LIKELY_FALSE": 54
+      },
+      "a tweet": {
+        "MISLEADING_OR_PARTIALLY_SUPPORTED": 56,
+        "LIKELY_FALSE": 61,
+        "LIKELY_TRUE": 74
+      },
+      "a campaign ad": {
+        "LIKELY_FALSE": 32,
+        "MISLEADING_OR_PARTIALLY_SUPPORTED": 97,
+        "LIKELY_TRUE": 36
+      },
+      "a television ad": {
+        "LIKELY_FALSE": 38,
+        "MISLEADING_OR_PARTIALLY_SUPPORTED": 90,
+        "LIKELY_TRUE": 34
+      },
+      "a radio interview": {
+        "MISLEADING_OR_PARTIALLY_SUPPORTED": 45,
+        "LIKELY_TRUE": 43,
+        "LIKELY_FALSE": 41
+      },
+      "a debate": {
+        "LIKELY_TRUE": 43,
+        "LIKELY_FALSE": 30,
+        "MISLEADING_OR_PARTIALLY_SUPPORTED": 45
+      }
+    },
+    "notes": [
+      "Dataset encompasses 5162 distinct sources/speakers and 191 domain entries.",
+      "Top-5 sources account for 10.81% of all records; top-10 account for 16.77%.",
+      "Observed Herfindahl-Hirschman Index is 39.94 (Normalized: 0.0038).",
+      "Source distribution shows broad dispersion across a wide diversity of originators."
+    ]
+  },
+  "temporal_analysis": {
+    "total_records": 12836,
+    "timestamps_available": 0,
+    "timestamps_missing": 12836,
+    "timestamp_coverage_ratio": 0.0,
+    "has_temporal_data": false,
+    "earliest_timestamp": null,
+    "latest_timestamp": null,
+    "records_per_year": {},
+    "records_per_month": {},
+    "yearly_label_distribution": {},
+    "notes": [
+      "No valid publication timestamps detected in this dataset.",
+      "Temporal distribution and drift analysis cannot be empirically evaluated.",
+      "Temporal splits should not be applied to datasets lacking validated chronological metadata."
+    ]
+  },
+  "metadata_analysis": {
+    "total_records": 12836,
+    "metadata_fields_profiled": [
+      "author",
+      "source_name_raw",
+      "source_domain",
+      "speaker",
+      "party_affiliation",
+      "context",
+      "state_info",
+      "subjects",
+      "job_title"
+    ],
+    "field_summaries": {
+      "author": {
+        "field_name": "author",
+        "available_count": 12836,
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "unique_values": 3318,
+        "normalized_entropy": 0.8289,
+        "top_values": [
+          {
+            "value": "barack-obama",
+            "count": 616,
+            "percentage": 4.8
+          },
+          {
+            "value": "donald-trump",
+            "count": 344,
+            "percentage": 2.68
+          },
+          {
+            "value": "hillary-clinton",
+            "count": 297,
+            "percentage": 2.31
+          },
+          {
+            "value": "mitt-romney",
+            "count": 216,
+            "percentage": 1.68
+          },
+          {
+            "value": "john-mccain",
+            "count": 189,
+            "percentage": 1.47
+          },
+          {
+            "value": "scott-walker",
+            "count": 184,
+            "percentage": 1.43
+          },
+          {
+            "value": "chain-email",
+            "count": 178,
+            "percentage": 1.39
+          },
+          {
+            "value": "rick-perry",
+            "count": 173,
+            "percentage": 1.35
+          },
+          {
+            "value": "marco-rubio",
+            "count": 153,
+            "percentage": 1.19
+          },
+          {
+            "value": "rick-scott",
+            "count": 150,
+            "percentage": 1.17
+          }
+        ]
+      },
+      "source_name_raw": {
+        "field_name": "source_name_raw",
+        "available_count": 12836,
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "unique_values": 5163,
+        "normalized_entropy": 0.8561,
+        "top_values": [
+          {
+            "value": "a news release",
+            "count": 318,
+            "percentage": 2.48
+          },
+          {
+            "value": "an interview",
+            "count": 287,
+            "percentage": 2.24
+          },
+          {
+            "value": "a press release",
+            "count": 286,
+            "percentage": 2.23
+          },
+          {
+            "value": "a speech",
+            "count": 267,
+            "percentage": 2.08
+          },
+          {
+            "value": "a TV ad",
+            "count": 229,
+            "percentage": 1.78
+          },
+          {
+            "value": "a tweet",
+            "count": 191,
+            "percentage": 1.49
+          },
+          {
+            "value": "a campaign ad",
+            "count": 165,
+            "percentage": 1.29
+          },
+          {
+            "value": "a television ad",
+            "count": 162,
+            "percentage": 1.26
+          },
+          {
+            "value": "a radio interview",
+            "count": 129,
+            "percentage": 1.0
+          },
+          {
+            "value": "a debate",
+            "count": 118,
+            "percentage": 0.92
+          }
+        ]
+      },
+      "source_domain": {
+        "field_name": "source_domain",
+        "available_count": 244,
+        "missing_count": 12592,
+        "missing_percentage": 98.1,
+        "unique_values": 190,
+        "normalized_entropy": 0.9603,
+        "top_values": [
+          {
+            "value": "a u.s. senate debate",
+            "count": 14,
+            "percentage": 0.11
+          },
+          {
+            "value": "a speech on the floor of the u.s. senate",
+            "count": 7,
+            "percentage": 0.05
+          },
+          {
+            "value": "a u.s. senate primary debate on fox news sunday",
+            "count": 6,
+            "percentage": 0.05
+          },
+          {
+            "value": "a column posted on medium.com",
+            "count": 6,
+            "percentage": 0.05
+          },
+          {
+            "value": "st. louis",
+            "count": 5,
+            "percentage": 0.04
+          },
+          {
+            "value": "the dec. 19 democratic presidential debate",
+            "count": 3,
+            "percentage": 0.02
+          },
+          {
+            "value": "an op-ed on northjersey.com",
+            "count": 3,
+            "percentage": 0.02
+          },
+          {
+            "value": "an interview on wcpn 90.3 fm",
+            "count": 3,
+            "percentage": 0.02
+          },
+          {
+            "value": "a debate in st. petersburg",
+            "count": 3,
+            "percentage": 0.02
+          },
+          {
+            "value": "a column on bluejersey.com",
+            "count": 3,
+            "percentage": 0.02
+          }
+        ]
+      },
+      "speaker": {
+        "field_name": "speaker",
+        "available_count": 12836,
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "unique_values": 3318,
+        "normalized_entropy": 0.8289,
+        "top_values": [
+          {
+            "value": "barack-obama",
+            "count": 616,
+            "percentage": 4.8
+          },
+          {
+            "value": "donald-trump",
+            "count": 344,
+            "percentage": 2.68
+          },
+          {
+            "value": "hillary-clinton",
+            "count": 297,
+            "percentage": 2.31
+          },
+          {
+            "value": "mitt-romney",
+            "count": 216,
+            "percentage": 1.68
+          },
+          {
+            "value": "john-mccain",
+            "count": 189,
+            "percentage": 1.47
+          },
+          {
+            "value": "scott-walker",
+            "count": 184,
+            "percentage": 1.43
+          },
+          {
+            "value": "chain-email",
+            "count": 178,
+            "percentage": 1.39
+          },
+          {
+            "value": "rick-perry",
+            "count": 173,
+            "percentage": 1.35
+          },
+          {
+            "value": "marco-rubio",
+            "count": 153,
+            "percentage": 1.19
+          },
+          {
+            "value": "rick-scott",
+            "count": 150,
+            "percentage": 1.17
+          }
+        ]
+      },
+      "party_affiliation": {
+        "field_name": "party_affiliation",
+        "available_count": 10651,
+        "missing_count": 2185,
+        "missing_percentage": 17.02,
+        "unique_values": 23,
+        "normalized_entropy": 0.3382,
+        "top_values": [
+          {
+            "value": "republican",
+            "count": 5687,
+            "percentage": 44.31
+          },
+          {
+            "value": "democrat",
+            "count": 4150,
+            "percentage": 32.33
+          },
+          {
+            "value": "organization",
+            "count": 265,
+            "percentage": 2.06
+          },
+          {
+            "value": "independent",
+            "count": 182,
+            "percentage": 1.42
+          },
+          {
+            "value": "newsmaker",
+            "count": 66,
+            "percentage": 0.51
+          },
+          {
+            "value": "libertarian",
+            "count": 51,
+            "percentage": 0.4
+          },
+          {
+            "value": "journalist",
+            "count": 49,
+            "percentage": 0.38
+          },
+          {
+            "value": "activist",
+            "count": 47,
+            "percentage": 0.37
+          },
+          {
+            "value": "columnist",
+            "count": 45,
+            "percentage": 0.35
+          },
+          {
+            "value": "talk-show-host",
+            "count": 32,
+            "percentage": 0.25
+          }
+        ]
+      },
+      "context": {
+        "field_name": "context",
+        "available_count": 12707,
+        "missing_count": 129,
+        "missing_percentage": 1.0,
+        "unique_values": 5079,
+        "normalized_entropy": 0.8549,
+        "top_values": [
+          {
+            "value": "a news release",
+            "count": 318,
+            "percentage": 2.48
+          },
+          {
+            "value": "an interview",
+            "count": 287,
+            "percentage": 2.24
+          },
+          {
+            "value": "a press release",
+            "count": 286,
+            "percentage": 2.23
+          },
+          {
+            "value": "a speech",
+            "count": 267,
+            "percentage": 2.08
+          },
+          {
+            "value": "a TV ad",
+            "count": 229,
+            "percentage": 1.78
+          },
+          {
+            "value": "a tweet",
+            "count": 191,
+            "percentage": 1.49
+          },
+          {
+            "value": "a campaign ad",
+            "count": 165,
+            "percentage": 1.29
+          },
+          {
+            "value": "a television ad",
+            "count": 162,
+            "percentage": 1.26
+          },
+          {
+            "value": "a radio interview",
+            "count": 129,
+            "percentage": 1.0
+          },
+          {
+            "value": "a debate",
+            "count": 118,
+            "percentage": 0.92
+          }
+        ]
+      },
+      "state_info": {
+        "field_name": "state_info",
+        "available_count": 10085,
+        "missing_count": 2751,
+        "missing_percentage": 21.43,
+        "unique_values": 72,
+        "normalized_entropy": 0.7199,
+        "top_values": [
+          {
+            "value": "Texas",
+            "count": 1263,
+            "percentage": 9.84
+          },
+          {
+            "value": "Florida",
+            "count": 1241,
+            "percentage": 9.67
+          },
+          {
+            "value": "Wisconsin",
+            "count": 906,
+            "percentage": 7.06
+          },
+          {
+            "value": "New York",
+            "count": 834,
+            "percentage": 6.5
+          },
+          {
+            "value": "Illinois",
+            "count": 701,
+            "percentage": 5.46
+          },
+          {
+            "value": "Ohio",
+            "count": 587,
+            "percentage": 4.57
+          },
+          {
+            "value": "Georgia",
+            "count": 555,
+            "percentage": 4.32
+          },
+          {
+            "value": "Virginia",
+            "count": 516,
+            "percentage": 4.02
+          },
+          {
+            "value": "Rhode Island",
+            "count": 456,
+            "percentage": 3.55
+          },
+          {
+            "value": "Oregon",
+            "count": 310,
+            "percentage": 2.42
+          }
+        ]
+      },
+      "subjects": {
+        "field_name": "subjects",
+        "available_count": 12836,
+        "missing_count": 0,
+        "missing_percentage": 0.0,
+        "unique_values": 4547,
+        "normalized_entropy": 0.8281,
+        "top_values": [
+          {
+            "value": "health-care",
+            "count": 475,
+            "percentage": 3.7
+          },
+          {
+            "value": "taxes",
+            "count": 356,
+            "percentage": 2.77
+          },
+          {
+            "value": "education",
+            "count": 310,
+            "percentage": 2.42
+          },
+          {
+            "value": "elections",
+            "count": 306,
+            "percentage": 2.38
+          },
+          {
+            "value": "immigration",
+            "count": 303,
+            "percentage": 2.36
+          },
+          {
+            "value": "candidates-biography",
+            "count": 240,
+            "percentage": 1.87
+          },
+          {
+            "value": "economy",
+            "count": 171,
+            "percentage": 1.33
+          },
+          {
+            "value": "federal-budget",
+            "count": 153,
+            "percentage": 1.19
+          },
+          {
+            "value": "economy,jobs",
+            "count": 152,
+            "percentage": 1.18
+          },
+          {
+            "value": "guns",
+            "count": 152,
+            "percentage": 1.18
+          }
+        ]
+      },
+      "job_title": {
+        "field_name": "job_title",
+        "available_count": 9258,
+        "missing_count": 3578,
+        "missing_percentage": 27.87,
+        "unique_values": 1349,
+        "normalized_entropy": 0.7264,
+        "top_values": [
+          {
+            "value": "President",
+            "count": 620,
+            "percentage": 4.83
+          },
+          {
+            "value": "U.S. Senator",
+            "count": 596,
+            "percentage": 4.64
+          },
+          {
+            "value": "Governor",
+            "count": 487,
+            "percentage": 3.79
+          },
+          {
+            "value": "President-Elect",
+            "count": 344,
+            "percentage": 2.68
+          },
+          {
+            "value": "U.S. senator",
+            "count": 328,
+            "percentage": 2.56
+          },
+          {
+            "value": "Presidential candidate",
+            "count": 314,
+            "percentage": 2.45
+          },
+          {
+            "value": "U.S. Representative",
+            "count": 220,
+            "percentage": 1.71
+          },
+          {
+            "value": "Former governor",
+            "count": 216,
+            "percentage": 1.68
+          },
+          {
+            "value": "Senator",
+            "count": 195,
+            "percentage": 1.52
+          },
+          {
+            "value": "Milwaukee County Executive",
+            "count": 184,
+            "percentage": 1.43
+          }
+        ]
+      }
+    },
+    "overall_completeness_ratio": 0.8162,
+    "notes": [
+      "Profiled 9 distinct metadata fields across 12836 records.",
+      "Mean field-level attribute availability is 81.62%."
+    ]
+  },
+  "modality_analysis": {
+    "total_records": 12836,
+    "text_only_count": 0,
+    "text_only_percentage": 0.0,
+    "image_only_count": 0,
+    "image_only_percentage": 0.0,
+    "text_and_image_count": 0,
+    "text_and_image_percentage": 0.0,
+    "text_and_metadata_count": 12836,
+    "text_and_metadata_percentage": 100.0,
+    "text_image_and_metadata_count": 0,
+    "text_image_and_metadata_percentage": 0.0,
+    "image_metadata_available": false,
+    "image_binary_available": false,
+    "image_analysis_possible": false,
+    "image_reference_count": 0,
+    "image_local_file_count": 0,
+    "image_quality": {
+      "total_images_checked": 0,
+      "valid_images": 0,
+      "corrupted_images": 0,
+      "unique_image_hashes": 0,
+      "duplicate_image_count": 0,
+      "format_distribution": {},
+      "file_size_bytes_stats": {
+        "min_val": 0.0,
+        "max_val": 0.0,
+        "mean_val": 0.0,
+        "median_val": 0.0
+      },
+      "width_stats": {
+        "min_val": 0.0,
+        "max_val": 0.0,
+        "mean_val": 0.0,
+        "median_val": 0.0
+      },
+      "height_stats": {
+        "min_val": 0.0,
+        "max_val": 0.0,
+        "mean_val": 0.0,
+        "median_val": 0.0
+      }
+    },
+    "notes": [
+      "Dataset is unimodal textual; no image references or metadata present."
+    ]
+  },
+  "duplicate_analysis": {
+    "total_records": 12836,
+    "exact_duplicates_count": 26,
+    "exact_duplicates_percentage": 0.2,
+    "exact_duplicate_groups": 24,
+    "near_duplicate_groups": 1,
+    "near_duplicate_records_count": 2,
+    "near_duplicate_percentage": 0.02,
+    "cluster_size_distribution": {
+      "singletons": 12786,
+      "size_2": 22,
+      "size_3_to_5": 2,
+      "size_gt_5": 0,
+      "max_cluster_size": 3
+    },
+    "conflicting_clusters_count": 5,
+    "conflicting_clusters": [
+      {
+        "cluster_id": "exact_grp_57ce7ef3a00c",
+        "cluster_type": "exact",
+        "record_count": 2,
+        "normalized_labels": [
+          "LIKELY_FALSE",
+          "MISLEADING_OR_PARTIALLY_SUPPORTED"
+        ],
+        "sample_text": "On abortion"
+      },
+      {
+        "cluster_id": "exact_grp_f067b94f8831",
+        "cluster_type": "exact",
+        "record_count": 2,
+        "normalized_labels": [
+          "LIKELY_FALSE",
+          "LIKELY_TRUE"
+        ],
+        "sample_text": "On support for gay marriage."
+      },
+      {
+        "cluster_id": "exact_grp_d61a4ac6faaa",
+        "cluster_type": "exact",
+        "record_count": 2,
+        "normalized_labels": [
+          "LIKELY_TRUE",
+          "MISLEADING_OR_PARTIALLY_SUPPORTED"
+        ],
+        "sample_text": "On torture."
+      },
+      {
+        "cluster_id": "exact_grp_2e0b5b86600e",
+        "cluster_type": "exact",
+        "record_count": 2,
+        "normalized_labels": [
+          "LIKELY_TRUE",
+          "MISLEADING_OR_PARTIALLY_SUPPORTED"
+        ],
+        "sample_text": "Four balanced budgets in a row, with no new taxes for anyone. The best job growth in 12 years. Nearly 130,000 new privat"
+      },
+      {
+        "cluster_id": "exact_grp_365dbf1a3386",
+        "cluster_type": "exact",
+        "record_count": 2,
+        "normalized_labels": [
+          "LIKELY_FALSE",
+          "MISLEADING_OR_PARTIALLY_SUPPORTED"
+        ],
+        "sample_text": "On the status of illegal immigrants"
+      }
+    ],
+    "notes": [
+      "Exact duplicates comprise 26 records (0.2%) across 24 clusters.",
+      "Near-duplicate grouping identified 1 clusters encompassing 2 records (0.02%).",
+      "AUDIT WARNING: 5 duplicate/near-duplicate clusters exhibit label divergence (conflicting fact-checking verdicts for identical or near-identical statements)."
+    ]
+  },
+  "cross_dataset_analysis": {
+    "datasets_profiled": [
+      "train",
+      "valid",
+      "test"
+    ],
+    "is_multi_dataset": false,
+    "pairwise_overlaps": [
+      {
+        "source_name": "train",
+        "target_name": "valid",
+        "source_records": 10269,
+        "target_records": 1284,
+        "exact_text_overlap_count": 5,
+        "exact_text_overlap_ratio": 0.0039,
+        "normalized_overlap_count": 5,
+        "potential_contamination_count": 5,
+        "contamination_risk_level": "LOW"
+      },
+      {
+        "source_name": "train",
+        "target_name": "test",
+        "source_records": 10269,
+        "target_records": 1283,
+        "exact_text_overlap_count": 4,
+        "exact_text_overlap_ratio": 0.0031,
+        "normalized_overlap_count": 4,
+        "potential_contamination_count": 4,
+        "contamination_risk_level": "HIGH"
+      },
+      {
+        "source_name": "valid",
+        "target_name": "test",
+        "source_records": 1284,
+        "target_records": 1283,
+        "exact_text_overlap_count": 0,
+        "exact_text_overlap_ratio": 0.0,
+        "normalized_overlap_count": 0,
+        "potential_contamination_count": 0,
+        "contamination_risk_level": "NONE"
+      }
+    ],
+    "cross_split_leakage_detected": true,
+    "notes": [
+      "Evaluated pairwise contamination across 3 partitions (train, valid, test).",
+      "CRITICAL WARNING: Split overlap detected! Data leakage is present between partitions."
+    ]
+  },
+  "statistical_tests": {
+    "total_tests_conducted": 3,
+    "alpha_level": 0.05,
+    "tests": [
+      {
+        "test_name": "Chi-Square Test of Independence (Party × Veracity)",
+        "research_question": "Is statement veracity independent of speaker political party affiliation?",
+        "null_hypothesis": "H0: Statement veracity and speaker political party affiliation are independent.",
+        "alternative_hypothesis": "H1: Statement veracity and speaker political party affiliation are associated.",
+        "test_statistic_name": "Chi-Square (χ²)",
+        "test_statistic_value": 236.2576,
+        "degrees_of_freedom": 4,
+        "p_value": 5.933771888359795e-50,
+        "alpha": 0.05,
+        "statistically_significant": true,
+        "effect_size_name": "Cramér's V",
+        "effect_size_value": 0.1053,
+        "sample_size": 10651,
+        "assumptions": [
+          "Contingency table expected frequencies >= 5 in at least 80% of cells.",
+          "Mutual exclusivity of categorization."
+        ],
+        "limitations": [
+          "LIAR statements are fact-checked based on newsworthiness and editorial selection, not random sampling of all political speech.",
+          "Statistical association reflects fact-checked claims in PolitiFact, not a generalized claim about political parties as a whole."
+        ],
+        "interpretation": "Statistically significant association detected (χ²=236.2576, df=4, p=5.93e-50, Cramér's V=0.1053). Observed statement truthfulness differs systematically across political affiliations in this benchmark. Note that Cramér's V of 0.1053 indicates the magnitude of association.",
+        "details": {
+          "contingency_table": {
+            "democrat": {
+              "LIKELY_FALSE": 823,
+              "LIKELY_TRUE": 1808,
+              "MISLEADING_OR_PARTIALLY_SUPPORTED": 1520
+            },
+            "other/independent": {
+              "LIKELY_FALSE": 203,
+              "LIKELY_TRUE": 309,
+              "MISLEADING_OR_PARTIALLY_SUPPORTED": 301
+            },
+            "republican": {
+              "LIKELY_FALSE": 1762,
+              "LIKELY_TRUE": 1721,
+              "MISLEADING_OR_PARTIALLY_SUPPORTED": 2204
+            }
+          },
+          "expected_frequencies": [
+            [
+              1086.5635151628956,
+              1495.7786123368699,
+              1568.6578725002348
+            ],
+            [
+              212.81044033424092,
+              292.95784433386535,
+              307.2317153318937
+            ],
+            [
+              1488.6260445028636,
+              2049.263543329265,
+              2149.1104121678713
+            ]
+          ]
+        }
+      },
+      {
+        "test_name": "Mann-Whitney U Test (LIKELY_TRUE vs LIKELY_FALSE Text Length)",
+        "research_question": "Do statements categorized as LIKELY_TRUE and LIKELY_FALSE differ in character length?",
+        "null_hypothesis": "H0: Text length distributions for LIKELY_TRUE and LIKELY_FALSE are identical.",
+        "alternative_hypothesis": "H1: Text length distributions for LIKELY_TRUE and LIKELY_FALSE differ.",
+        "test_statistic_name": "Mann-Whitney U",
+        "test_statistic_value": 8675418.5,
+        "degrees_of_freedom": null,
+        "p_value": 4.5030889962429516e-09,
+        "alpha": 0.05,
+        "statistically_significant": true,
+        "effect_size_name": "Rank-Biserial Correlation",
+        "effect_size_value": -0.0758,
+        "sample_size": 8090,
+        "assumptions": [
+          "Continuous or ordinal response variable (character length in characters).",
+          "Non-parametric distribution (does not assume Gaussian normality).",
+          "Independent observations across statements."
+        ],
+        "limitations": [
+          "Statistical significance in large sample sizes does not imply that text length alone is an effective predictive feature.",
+          "Character length is sensitive to quotation conventions and speech transcript editing."
+        ],
+        "interpretation": "Statistically significant difference in character length between LIKELY_TRUE (median=99.0) and LIKELY_FALSE (median=93.0) statements (U=8675418.5, p=4.50e-09, Rank-biserial r=-0.0758). While statistically detectable, the effect size indicates practical length variation is modest.",
+        "details": {
+          "LIKELY_TRUE_count": 4529,
+          "LIKELY_TRUE_median": 99.0,
+          "LIKELY_FALSE_count": 3561,
+          "LIKELY_FALSE_median": 93.0
+        }
+      },
+      {
+        "test_name": "Chi-Square Goodness-of-Fit (Label Uniformity)",
+        "research_question": "Are statements uniformly distributed across truthfulness categories?",
+        "null_hypothesis": "H0: Statement records are uniformly distributed across all canonical labels.",
+        "alternative_hypothesis": "H1: Statement records are not uniformly distributed across canonical labels.",
+        "test_statistic_name": "Chi-Square (χ²)",
+        "test_statistic_value": 186.0656,
+        "degrees_of_freedom": 2,
+        "p_value": 3.947926218993399e-41,
+        "alpha": 0.05,
+        "statistically_significant": true,
+        "effect_size_name": "Cohen's w",
+        "effect_size_value": 0.1204,
+        "sample_size": 12836,
+        "assumptions": [
+          "Categories are mutually exclusive and exhaustive.",
+          "Expected frequency per cell >= 5."
+        ],
+        "limitations": [
+          "Uniform distribution is tested as an agnostic statistical baseline null model; natural real-world veracity distributions are not expected to be uniform.",
+          "Rejection of uniformity is standard for empirical media datasets and does not imply defective data collection."
+        ],
+        "interpretation": "Statistically significant deviation from uniform class distribution (χ²=186.0656, df=2, p=3.95e-41, Cohen's w=0.1204). The benchmark exhibits significant class disparity relative to an equal prior expectation.",
+        "details": {
+          "observed": {
+            "LIKELY_FALSE": 3561,
+            "LIKELY_TRUE": 4529,
+            "MISLEADING_OR_PARTIALLY_SUPPORTED": 4746
+          },
+          "expected": {
+            "LIKELY_FALSE": 4278.7,
+            "LIKELY_TRUE": 4278.7,
+            "MISLEADING_OR_PARTIALLY_SUPPORTED": 4278.7
+          }
+        }
+      }
+    ],
+    "multiple_comparison_correction": "Prespecified Distinct Hypotheses (Nominal α=0.05)",
+    "notes": [
+      "All statistical tests executed using SciPy 1.18.0 with explicit hypotheses and assumptions.",
+      "Effect sizes (Cramér's V, Rank-Biserial r, Cohen's w) are reported alongside p-values."
+    ]
+  },
+  "readiness_summary": {
+    "label_completeness": "100.0% (0 unresolved)",
+    "modality_completeness": "Text Only (No Local Images)",
+    "temporal_completeness": "0.0% Timestamps Present",
+    "source_completeness": "5162 Unique Sources (Top-5 Share: 10.81%)",
+    "duplicate_risk": "LOW (0.2% exact, 0.02% near)",
+    "cross_dataset_leakage_risk": "DETECTED",
+    "class_balance": "Imbalance Ratio: 1.33:1 (Normalized Entropy: 0.9932)",
+    "reproducibility": "Git: f64a5a6f | Python: 3.14.7 | Seed: 42"
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "total_tests_conducted": 3,
+  "alpha_level": 0.05,
+  "tests": [
+    {
+      "test_name": "Chi-Square Test of Independence (Party × Veracity)",
+      "research_question": "Is statement veracity independent of speaker political party affiliation?",
+      "null_hypothesis": "H0: Statement veracity and speaker political party affiliation are independent.",
+      "alternative_hypothesis": "H1: Statement veracity and speaker political party affiliation are associated.",
+      "test_statistic_name": "Chi-Square (χ²)",
+      "test_statistic_value": 236.2576,
+      "degrees_of_freedom": 4,
+      "p_value": 5.933771888359795e-50,
+      "alpha": 0.05,
+      "statistically_significant": true,
+      "effect_size_name": "Cramér's V",
+      "effect_size_value": 0.1053,
+      "sample_size": 10651,
+      "assumptions": [
+        "Contingency table expected frequencies >= 5 in at least 80% of cells.",
+        "Mutual exclusivity of categorization."
+      ],
+      "limitations": [
+        "LIAR statements are fact-checked based on newsworthiness and editorial selection, not random sampling of all political speech.",
+        "Statistical association reflects fact-checked claims in PolitiFact, not a generalized claim about political parties as a whole."
+      ],
+      "interpretation": "Statistically significant association detected (χ²=236.2576, df=4, p=5.93e-50, Cramér's V=0.1053). Observed statement truthfulness differs systematically across political affiliations in this benchmark. Note that Cramér's V of 0.1053 indicates the magnitude of association.",
+      "details": {
+        "contingency_table": {
+          "democrat": {
+            "LIKELY_FALSE": 823,
+            "LIKELY_TRUE": 1808,
+            "MISLEADING_OR_PARTIALLY_SUPPORTED": 1520
+          },
+          "other/independent": {
+            "LIKELY_FALSE": 203,
+            "LIKELY_TRUE": 309,
+            "MISLEADING_OR_PARTIALLY_SUPPORTED": 301
+          },
+          "republican": {
+            "LIKELY_FALSE": 1762,
+            "LIKELY_TRUE": 1721,
+            "MISLEADING_OR_PARTIALLY_SUPPORTED": 2204
+          }
+        },
+        "expected_frequencies": [
+          [
+            1086.5635151628956,
+            1495.7786123368699,
+            1568.6578725002348
+          ],
+          [
+            212.81044033424092,
+            292.95784433386535,
+            307.2317153318937
+          ],
+          [
+            1488.6260445028636,
+            2049.263543329265,
+            2149.1104121678713
+          ]
+        ]
+      }
+    },
+    {
+      "test_name": "Mann-Whitney U Test (LIKELY_TRUE vs LIKELY_FALSE Text Length)",
+      "research_question": "Do statements categorized as LIKELY_TRUE and LIKELY_FALSE differ in character length?",
+      "null_hypothesis": "H0: Text length distributions for LIKELY_TRUE and LIKELY_FALSE are identical.",
+      "alternative_hypothesis": "H1: Text length distributions for LIKELY_TRUE and LIKELY_FALSE differ.",
+      "test_statistic_name": "Mann-Whitney U",
+      "test_statistic_value": 8675418.5,
+      "degrees_of_freedom": null,
+      "p_value": 4.5030889962429516e-09,
+      "alpha": 0.05,
+      "statistically_significant": true,
+      "effect_size_name": "Rank-Biserial Correlation",
+      "effect_size_value": -0.0758,
+      "sample_size": 8090,
+      "assumptions": [
+        "Continuous or ordinal response variable (character length in characters).",
+        "Non-parametric distribution (does not assume Gaussian normality).",
+        "Independent observations across statements."
+      ],
+      "limitations": [
+        "Statistical significance in large sample sizes does not imply that text length alone is an effective predictive feature.",
+        "Character length is sensitive to quotation conventions and speech transcript editing."
+      ],
+      "interpretation": "Statistically significant difference in character length between LIKELY_TRUE (median=99.0) and LIKELY_FALSE (median=93.0) statements (U=8675418.5, p=4.50e-09, Rank-biserial r=-0.0758). While statistically detectable, the effect size indicates practical length variation is modest.",
+      "details": {
+        "LIKELY_TRUE_count": 4529,
+        "LIKELY_TRUE_median": 99.0,
+        "LIKELY_FALSE_count": 3561,
+        "LIKELY_FALSE_median": 93.0
+      }
+    },
+    {
+      "test_name": "Chi-Square Goodness-of-Fit (Label Uniformity)",
+      "research_question": "Are statements uniformly distributed across truthfulness categories?",
+      "null_hypothesis": "H0: Statement records are uniformly distributed across all canonical labels.",
+      "alternative_hypothesis": "H1: Statement records are not uniformly distributed across canonical labels.",
+      "test_statistic_name": "Chi-Square (χ²)",
+      "test_statistic_value": 186.0656,
+      "degrees_of_freedom": 2,
+      "p_value": 3.947926218993399e-41,
+      "alpha": 0.05,
+      "statistically_significant": true,
+      "effect_size_name": "Cohen's w",
+      "effect_size_value": 0.1204,
+      "sample_size": 12836,
+      "assumptions": [
+        "Categories are mutually exclusive and exhaustive.",
+        "Expected frequency per cell >= 5."
+      ],
+      "limitations": [
+        "Uniform distribution is tested as an agnostic statistical baseline null model; natural real-world veracity distributions are not expected to be uniform.",
+        "Rejection of uniformity is standard for empirical media datasets and does not imply defective data collection."
+      ],
+      "interpretation": "Statistically significant deviation from uniform class distribution (χ²=186.0656, df=2, p=3.95e-41, Cohen's w=0.1204). The benchmark exhibits significant class disparity relative to an equal prior expectation.",
+      "details": {
+        "observed": {
+          "LIKELY_FALSE": 3561,
+          "LIKELY_TRUE": 4529,
+          "MISLEADING_OR_PARTIALLY_SUPPORTED": 4746
+        },
+        "expected": {
+          "LIKELY_FALSE": 4278.7,
+          "LIKELY_TRUE": 4278.7,
+          "MISLEADING_OR_PARTIALLY_SUPPORTED": 4278.7
+        }
+      }
+    }
+  ],
+  "multiple_comparison_correction": "Prespecified Distinct Hypotheses (Nominal α=0.05)",
+  "notes": [
+    "All statistical tests executed using SciPy 1.18.0 with explicit hypotheses and assumptions.",
+    "Effect sizes (Cramér's V, Rank-Biserial r, Cohen's w) are reported alongside p-values."
+  ]
+}

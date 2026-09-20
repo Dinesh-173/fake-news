@@ -1,0 +1,17 @@
+{
+  "total_records": 12836,
+  "timestamps_available": 0,
+  "timestamps_missing": 12836,
+  "timestamp_coverage_ratio": 0.0,
+  "has_temporal_data": false,
+  "earliest_timestamp": null,
+  "latest_timestamp": null,
+  "records_per_year": {},
+  "records_per_month": {},
+  "yearly_label_distribution": {},
+  "notes": [
+    "No valid publication timestamps detected in this dataset.",
+    "Temporal distribution and drift analysis cannot be empirically evaluated.",
+    "Temporal splits should not be applied to datasets lacking validated chronological metadata."
+  ]
+}

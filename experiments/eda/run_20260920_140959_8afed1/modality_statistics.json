@@ -1,0 +1,47 @@
+{
+  "total_records": 12836,
+  "text_only_count": 0,
+  "text_only_percentage": 0.0,
+  "image_only_count": 0,
+  "image_only_percentage": 0.0,
+  "text_and_image_count": 0,
+  "text_and_image_percentage": 0.0,
+  "text_and_metadata_count": 12836,
+  "text_and_metadata_percentage": 100.0,
+  "text_image_and_metadata_count": 0,
+  "text_image_and_metadata_percentage": 0.0,
+  "image_metadata_available": false,
+  "image_binary_available": false,
+  "image_analysis_possible": false,
+  "image_reference_count": 0,
+  "image_local_file_count": 0,
+  "image_quality": {
+    "total_images_checked": 0,
+    "valid_images": 0,
+    "corrupted_images": 0,
+    "unique_image_hashes": 0,
+    "duplicate_image_count": 0,
+    "format_distribution": {},
+    "file_size_bytes_stats": {
+      "min_val": 0.0,
+      "max_val": 0.0,
+      "mean_val": 0.0,
+      "median_val": 0.0
+    },
+    "width_stats": {
+      "min_val": 0.0,
+      "max_val": 0.0,
+      "mean_val": 0.0,
+      "median_val": 0.0
+    },
+    "height_stats": {
+      "min_val": 0.0,
+      "max_val": 0.0,
+      "mean_val": 0.0,
+      "median_val": 0.0
+    }
+  },
+  "notes": [
+    "Dataset is unimodal textual; no image references or metadata present."
+  ]
+}

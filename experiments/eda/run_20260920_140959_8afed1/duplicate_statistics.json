@@ -1,0 +1,74 @@
+{
+  "total_records": 12836,
+  "exact_duplicates_count": 26,
+  "exact_duplicates_percentage": 0.2,
+  "exact_duplicate_groups": 24,
+  "near_duplicate_groups": 1,
+  "near_duplicate_records_count": 2,
+  "near_duplicate_percentage": 0.02,
+  "cluster_size_distribution": {
+    "singletons": 12786,
+    "size_2": 22,
+    "size_3_to_5": 2,
+    "size_gt_5": 0,
+    "max_cluster_size": 3
+  },
+  "conflicting_clusters_count": 5,
+  "conflicting_clusters": [
+    {
+      "cluster_id": "exact_grp_57ce7ef3a00c",
+      "cluster_type": "exact",
+      "record_count": 2,
+      "normalized_labels": [
+        "LIKELY_FALSE",
+        "MISLEADING_OR_PARTIALLY_SUPPORTED"
+      ],
+      "sample_text": "On abortion"
+    },
+    {
+      "cluster_id": "exact_grp_f067b94f8831",
+      "cluster_type": "exact",
+      "record_count": 2,
+      "normalized_labels": [
+        "LIKELY_FALSE",
+        "LIKELY_TRUE"
+      ],
+      "sample_text": "On support for gay marriage."
+    },
+    {
+      "cluster_id": "exact_grp_d61a4ac6faaa",
+      "cluster_type": "exact",
+      "record_count": 2,
+      "normalized_labels": [
+        "LIKELY_TRUE",
+        "MISLEADING_OR_PARTIALLY_SUPPORTED"
+      ],
+      "sample_text": "On torture."
+    },
+    {
+      "cluster_id": "exact_grp_2e0b5b86600e",
+      "cluster_type": "exact",
+      "record_count": 2,
+      "normalized_labels": [
+        "LIKELY_TRUE",
+        "MISLEADING_OR_PARTIALLY_SUPPORTED"
+      ],
+      "sample_text": "Four balanced budgets in a row, with no new taxes for anyone. The best job growth in 12 years. Nearly 130,000 new privat"
+    },
+    {
+      "cluster_id": "exact_grp_365dbf1a3386",
+      "cluster_type": "exact",
+      "record_count": 2,
+      "normalized_labels": [
+        "LIKELY_FALSE",
+        "MISLEADING_OR_PARTIALLY_SUPPORTED"
+      ],
+      "sample_text": "On the status of illegal immigrants"
+    }
+  ],
+  "notes": [
+    "Exact duplicates comprise 26 records (0.2%) across 24 clusters.",
+    "Near-duplicate grouping identified 1 clusters encompassing 2 records (0.02%).",
+    "AUDIT WARNING: 5 duplicate/near-duplicate clusters exhibit label divergence (conflicting fact-checking verdicts for identical or near-identical statements)."
+  ]
+}
