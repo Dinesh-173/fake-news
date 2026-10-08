@@ -1,0 +1,11 @@
+{
+  "data_directory": "C:\\Users\\Tommey\\Desktop\\fake-news\\data\\processed\\liar",
+  "verified_hashes": {
+    "train.jsonl": "917e581b69023a116ac01bc2ad9078872ce464a909325105164947a8fbc07ee5",
+    "val.jsonl": "406194f5f1a5b12eba94c81ee4fdba269a2242c05c818bf5f702a4c7ab329d56",
+    "test.jsonl": "b344c95400cbf91b2fc54fe8e4c06b89506398e7667863bee816d45ca4826330"
+  },
+  "train_count": 10278,
+  "val_count": 1279,
+  "test_count": 1279
+}

@@ -1,0 +1,177 @@
+{
+  "model_name": "bert-base-uncased",
+  "candidate": "c1",
+  "epochs": 2,
+  "best_epoch": 2,
+  "best_val_macro_f1": 0.466,
+  "epoch_logs": [
+    {
+      "epoch": 1,
+      "train_loss": 1.0668,
+      "val_loss": 1.0391,
+      "val_macro_f1": 0.4305,
+      "val_macro_recall": 0.4471,
+      "val_accuracy": 0.4402,
+      "duration_seconds": 993.34,
+      "val_metrics": {
+        "total_samples": 1279,
+        "overall": {
+          "accuracy": 0.4402,
+          "macro_precision": 0.441,
+          "macro_recall": 0.4471,
+          "macro_f1": 0.4305,
+          "weighted_precision": 0.4407,
+          "weighted_recall": 0.4402,
+          "weighted_f1": 0.4263
+        },
+        "per_class": {
+          "LIKELY_FALSE": {
+            "precision": 0.44642857142857145,
+            "recall": 0.4,
+            "f1_score": 0.4219409282700422,
+            "support": 375
+          },
+          "LIKELY_TRUE": {
+            "precision": 0.43740095087163233,
+            "recall": 0.6587112171837709,
+            "f1_score": 0.5257142857142857,
+            "support": 419
+          },
+          "MISLEADING_OR_PARTIALLY_SUPPORTED": {
+            "precision": 0.4391025641025641,
+            "recall": 0.2824742268041237,
+            "f1_score": 0.3437892095357591,
+            "support": 485
+          }
+        },
+        "confusion_matrix": {
+          "classes": [
+            "LIKELY_FALSE",
+            "LIKELY_TRUE",
+            "MISLEADING_OR_PARTIALLY_SUPPORTED"
+          ],
+          "matrix": [
+            [
+              150,
+              130,
+              95
+            ],
+            [
+              63,
+              276,
+              80
+            ],
+            [
+              123,
+              225,
+              137
+            ]
+          ],
+          "matrix_normalized_percent": [
+            [
+              40.0,
+              34.67,
+              25.33
+            ],
+            [
+              15.04,
+              65.87,
+              19.09
+            ],
+            [
+              25.36,
+              46.39,
+              28.25
+            ]
+          ]
+        },
+        "eval_loss": 1.0391
+      }
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.9699,
+      "val_loss": 1.0381,
+      "val_macro_f1": 0.466,
+      "val_macro_recall": 0.4703,
+      "val_accuracy": 0.4691,
+      "duration_seconds": 1006.87,
+      "val_metrics": {
+        "total_samples": 1279,
+        "overall": {
+          "accuracy": 0.4691,
+          "macro_precision": 0.4708,
+          "macro_recall": 0.4703,
+          "macro_f1": 0.466,
+          "weighted_precision": 0.4702,
+          "weighted_recall": 0.4691,
+          "weighted_f1": 0.4652
+        },
+        "per_class": {
+          "LIKELY_FALSE": {
+            "precision": 0.48264984227129337,
+            "recall": 0.408,
+            "f1_score": 0.4421965317919075,
+            "support": 375
+          },
+          "LIKELY_TRUE": {
+            "precision": 0.46296296296296297,
+            "recall": 0.5966587112171837,
+            "f1_score": 0.5213764337851929,
+            "support": 419
+          },
+          "MISLEADING_OR_PARTIALLY_SUPPORTED": {
+            "precision": 0.466824644549763,
+            "recall": 0.4061855670103093,
+            "f1_score": 0.43439911797133407,
+            "support": 485
+          }
+        },
+        "confusion_matrix": {
+          "classes": [
+            "LIKELY_FALSE",
+            "LIKELY_TRUE",
+            "MISLEADING_OR_PARTIALLY_SUPPORTED"
+          ],
+          "matrix": [
+            [
+              153,
+              107,
+              115
+            ],
+            [
+              59,
+              250,
+              110
+            ],
+            [
+              105,
+              183,
+              197
+            ]
+          ],
+          "matrix_normalized_percent": [
+            [
+              40.8,
+              28.53,
+              30.67
+            ],
+            [
+              14.08,
+              59.67,
+              26.25
+            ],
+            [
+              21.65,
+              37.73,
+              40.62
+            ]
+          ]
+        },
+        "eval_loss": 1.0381
+      }
+    }
+  ],
+  "test_latency_ms_per_sample": 20.8,
+  "total_training_duration_minutes": 33.34
+}

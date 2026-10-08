@@ -1,0 +1,10 @@
+model_name: bert-base-uncased
+candidate: c1
+seed: 42
+max_length: 128
+learning_rate: 2.0e-05
+batch_size: 16
+eval_batch_size: 32
+epochs: 2
+class_weights: null
+tie_break_rule: higher Macro-F1 > higher Macro-Recall > lower val loss > earlier epoch

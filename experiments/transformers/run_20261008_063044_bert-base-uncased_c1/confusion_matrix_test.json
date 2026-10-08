@@ -1,0 +1,41 @@
+{
+  "classes": [
+    "LIKELY_FALSE",
+    "LIKELY_TRUE",
+    "MISLEADING_OR_PARTIALLY_SUPPORTED"
+  ],
+  "matrix": [
+    [
+      130,
+      112,
+      98
+    ],
+    [
+      59,
+      278,
+      122
+    ],
+    [
+      108,
+      182,
+      190
+    ]
+  ],
+  "matrix_normalized_percent": [
+    [
+      38.24,
+      32.94,
+      28.82
+    ],
+    [
+      12.85,
+      60.57,
+      26.58
+    ],
+    [
+      22.5,
+      37.92,
+      39.58
+    ]
+  ]
+}
