@@ -1,0 +1,267 @@
+{
+  "timestamp_utc": "2026-10-08T07:08:08.507949+00:00",
+  "dataset": "LIAR (3-class canonical partition)",
+  "test_samples": 1279,
+  "baselines": {
+    "majority": {
+      "accuracy": 0.3753,
+      "macro_precision": 0.1251,
+      "macro_recall": 0.3333,
+      "macro_f1": 0.1819,
+      "weighted_precision": 0.1408,
+      "weighted_recall": 0.3753,
+      "weighted_f1": 0.2048
+    },
+    "logistic_regression": {
+      "accuracy": 0.4285,
+      "macro_precision": 0.4242,
+      "macro_recall": 0.4279,
+      "macro_f1": 0.4253,
+      "weighted_precision": 0.4277,
+      "weighted_recall": 0.4285,
+      "weighted_f1": 0.4272
+    },
+    "linear_svm": {
+      "accuracy": 0.4175,
+      "macro_precision": 0.4144,
+      "macro_recall": 0.4096,
+      "macro_f1": 0.4101,
+      "weighted_precision": 0.4154,
+      "weighted_recall": 0.4175,
+      "weighted_f1": 0.4148
+    }
+  },
+  "transformer_bert": {
+    "accuracy": 0.4676,
+    "macro_precision": 0.4624,
+    "macro_recall": 0.4613,
+    "macro_f1": 0.4581,
+    "weighted_precision": 0.4647,
+    "weighted_recall": 0.4676,
+    "weighted_f1": 0.4623
+  },
+  "ablations": [
+    {
+      "config_name": "full_model",
+      "description": "Full Multimodal Evidence-Aware Framework (Text + Image + Evidence + Source + Metadata)",
+      "include_image": true,
+      "include_evidence": true,
+      "include_source": true,
+      "include_metadata": true,
+      "accuracy": 0.8,
+      "mean_calibrated_confidence": 0.6602,
+      "mean_evidence_sufficiency": 0.3347
+    },
+    {
+      "config_name": "text_only",
+      "description": "Text Classifier Only (No external evidence, no image, no source credibility)",
+      "include_image": false,
+      "include_evidence": false,
+      "include_source": false,
+      "include_metadata": false,
+      "accuracy": 0.4,
+      "mean_calibrated_confidence": 0.4316,
+      "mean_evidence_sufficiency": 0.0
+    },
+    {
+      "config_name": "text_plus_image",
+      "description": "Text + Image (No external retrieval, no source credibility)",
+      "include_image": true,
+      "include_evidence": false,
+      "include_source": false,
+      "include_metadata": false,
+      "accuracy": 0.6,
+      "mean_calibrated_confidence": 0.4316,
+      "mean_evidence_sufficiency": 0.0
+    },
+    {
+      "config_name": "text_plus_evidence",
+      "description": "Text + Evidence (Unweighted external evidence, no image, no source credibility)",
+      "include_image": false,
+      "include_evidence": true,
+      "include_source": false,
+      "include_metadata": false,
+      "accuracy": 0.4,
+      "mean_calibrated_confidence": 0.4114,
+      "mean_evidence_sufficiency": 0.1775
+    },
+    {
+      "config_name": "text_plus_source_meta",
+      "description": "Text + Source/Metadata (No image, no retrieved evidence passages)",
+      "include_image": false,
+      "include_evidence": false,
+      "include_source": true,
+      "include_metadata": true,
+      "accuracy": 0.4,
+      "mean_calibrated_confidence": 0.4316,
+      "mean_evidence_sufficiency": 0.0
+    },
+    {
+      "config_name": "minus_image",
+      "description": "Ablation: Full Framework excluding Image Analysis",
+      "include_image": false,
+      "include_evidence": true,
+      "include_source": true,
+      "include_metadata": true,
+      "accuracy": 0.8,
+      "mean_calibrated_confidence": 0.6602,
+      "mean_evidence_sufficiency": 0.3347
+    },
+    {
+      "config_name": "minus_evidence",
+      "description": "Ablation: Full Framework excluding Evidence Retrieval",
+      "include_image": true,
+      "include_evidence": false,
+      "include_source": true,
+      "include_metadata": true,
+      "accuracy": 0.6,
+      "mean_calibrated_confidence": 0.4316,
+      "mean_evidence_sufficiency": 0.0
+    },
+    {
+      "config_name": "minus_source",
+      "description": "Ablation: Full Framework excluding Source Credibility",
+      "include_image": true,
+      "include_evidence": true,
+      "include_source": false,
+      "include_metadata": true,
+      "accuracy": 0.4,
+      "mean_calibrated_confidence": 0.4114,
+      "mean_evidence_sufficiency": 0.1775
+    },
+    {
+      "config_name": "minus_metadata",
+      "description": "Ablation: Full Framework excluding Claim Metadata & Salience",
+      "include_image": true,
+      "include_evidence": true,
+      "include_source": true,
+      "include_metadata": false,
+      "accuracy": 0.8,
+      "mean_calibrated_confidence": 0.6602,
+      "mean_evidence_sufficiency": 0.3347
+    }
+  ],
+  "uncertainty_calibration": {
+    "expected_calibration_error": 0.0524,
+    "max_calibration_error": 0.2292,
+    "brier_score": 0.6414,
+    "num_bins": 10,
+    "optimal_temperature": 1.0,
+    "bins": [
+      {
+        "bin_index": 0,
+        "accuracy": 0.0,
+        "confidence": 0.05,
+        "count": 0
+      },
+      {
+        "bin_index": 1,
+        "accuracy": 0.0,
+        "confidence": 0.15,
+        "count": 0
+      },
+      {
+        "bin_index": 2,
+        "accuracy": 0.0,
+        "confidence": 0.25,
+        "count": 0
+      },
+      {
+        "bin_index": 3,
+        "accuracy": 0.3657,
+        "confidence": 0.3765,
+        "count": 216
+      },
+      {
+        "bin_index": 4,
+        "accuracy": 0.3935,
+        "confidence": 0.4459,
+        "count": 615
+      },
+      {
+        "bin_index": 5,
+        "accuracy": 0.489,
+        "confidence": 0.5461,
+        "count": 319
+      },
+      {
+        "bin_index": 6,
+        "accuracy": 0.5481,
+        "confidence": 0.6388,
+        "count": 104
+      },
+      {
+        "bin_index": 7,
+        "accuracy": 0.55,
+        "confidence": 0.7357,
+        "count": 20
+      },
+      {
+        "bin_index": 8,
+        "accuracy": 0.6,
+        "confidence": 0.8292,
+        "count": 5
+      },
+      {
+        "bin_index": 9,
+        "accuracy": 0.0,
+        "confidence": 0.95,
+        "count": 0
+      }
+    ]
+  },
+  "robustness_summary": {
+    "suite_version": "1.0.0",
+    "num_samples_evaluated": 20,
+    "summaries": [
+      {
+        "perturbation_type": "typo_noise_8pct",
+        "total_evaluated": 20,
+        "invariance_rate": 0.85,
+        "mean_confidence_drop": 0.0415,
+        "error_rate": 0.0,
+        "notes": "Tested across 20 canonical test samples."
+      },
+      {
+        "perturbation_type": "casing_perturbation",
+        "total_evaluated": 20,
+        "invariance_rate": 1.0,
+        "mean_confidence_drop": 0.0,
+        "error_rate": 0.0,
+        "notes": "Tested across 20 canonical test samples."
+      },
+      {
+        "perturbation_type": "paraphrase_prefix",
+        "total_evaluated": 20,
+        "invariance_rate": 1.0,
+        "mean_confidence_drop": 0.0193,
+        "error_rate": 0.0,
+        "notes": "Tested across 20 canonical test samples."
+      },
+      {
+        "perturbation_type": "ultra_short_truncation",
+        "total_evaluated": 20,
+        "invariance_rate": 0.65,
+        "mean_confidence_drop": 0.038,
+        "error_rate": 0.0,
+        "notes": "Tested across 20 canonical test samples."
+      },
+      {
+        "perturbation_type": "long_article_padding",
+        "total_evaluated": 20,
+        "invariance_rate": 0.8,
+        "mean_confidence_drop": 0.0849,
+        "error_rate": 0.0,
+        "notes": "Tested across 20 canonical test samples."
+      }
+    ],
+    "total_perturbations": 100
+  },
+  "error_taxonomies": {
+    "ambiguous_claim": 31,
+    "subtle_misleading_context": 290,
+    "factual_false_positives": 83,
+    "factual_false_negatives": 84,
+    "unverifiable_without_external_evidence": 243
+  }
+}

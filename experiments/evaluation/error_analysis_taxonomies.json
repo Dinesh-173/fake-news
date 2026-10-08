@@ -1,0 +1,7 @@
+{
+  "ambiguous_claim": 31,
+  "subtle_misleading_context": 290,
+  "factual_false_positives": 83,
+  "factual_false_negatives": 84,
+  "unverifiable_without_external_evidence": 243
+}

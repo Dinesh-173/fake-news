@@ -1,0 +1,221 @@
+[
+  {
+    "scenario_id": "DEMO_1_LIKELY_TRUE",
+    "name": "Scenario 1: Likely True Claim (Corroborated by Official Sources)",
+    "response": {
+      "analysis_id": "025d3a79-fae7-4f36-aef1-61bd90626a56",
+      "assessment": {
+        "state": "INSUFFICIENT_EVIDENCE",
+        "prediction_confidence": 0.5,
+        "calibrated_confidence": 0.35,
+        "evidence_sufficiency": 0.0,
+        "conflict_score": 0.0
+      },
+      "claims": [
+        {
+          "claim_text": "NASA launched the exploration rover to Mars successfully from Cape Canaveral.",
+          "source_sentence": "NASA launched the exploration rover to Mars successfully from Cape Canaveral.",
+          "start_char": 0,
+          "end_char": 77,
+          "salience_score": 0.85,
+          "claim_id": "claim_6d43830b"
+        },
+        {
+          "claim_text": "Engineers confirmed all telemetry systems are nominal and the spacecraft is on a direct trajectory.",
+          "source_sentence": "Engineers confirmed all telemetry systems are nominal and the spacecraft is on a direct trajectory.",
+          "start_char": 78,
+          "end_char": 177,
+          "salience_score": 0.65,
+          "claim_id": "claim_7e06883f"
+        }
+      ],
+      "evidence": [],
+      "explanation": {
+        "summary": "The assessment for 'NASA launched the exploration rover to Mars successfully from Cape Canaveral....' is INSUFFICIENT EVIDENCE. Available external records do not provide adequate corroborated evidence to support or refute the claim with scientific certainty.",
+        "evidence_breakdown": "\u2022 WHAT WAS CLAIMED: \"NASA launched the exploration rover to Mars successfully from Cape Canaveral.\"\n\u2022 EVIDENCE FOUND: Zero matching records found across accredited fact-checking archives and external repositories.\n\u2022 REASONING & SUFFICIENCY: Evidence sufficiency evaluated at 0.0%. The final verdict is grounded in external consensus rather than model bias.",
+        "faithfulness_score": 1.0
+      },
+      "execution_stats": {
+        "processing_time_ms": 1363.42,
+        "model_used": "logistic_regression",
+        "device": "cpu",
+        "claims_extracted": 2,
+        "evidence_sources_queried": 0,
+        "decision_rationale": "Insufficient evidence retrieved (<40% sufficiency threshold). Withholding definitive veracity verdict to prevent ungrounded prediction."
+      }
+    }
+  },
+  {
+    "scenario_id": "DEMO_2_LIKELY_FALSE",
+    "name": "Scenario 2: Likely False Claim (Directly Refuted by Fact-Checkers)",
+    "response": {
+      "analysis_id": "53e138bc-4fd0-4fc4-a284-ea28588365ff",
+      "assessment": {
+        "state": "INSUFFICIENT_EVIDENCE",
+        "prediction_confidence": 0.5,
+        "calibrated_confidence": 0.35,
+        "evidence_sufficiency": 0.32256,
+        "conflict_score": 0.09999999999999999
+      },
+      "claims": [
+        {
+          "claim_text": "NASA rovers have discovered ancient alien cities and extraterrestrial pyramid structures on Mars, confirming intelligent alien life.",
+          "source_sentence": "NASA rovers have discovered ancient alien cities and extraterrestrial pyramid structures on Mars, confirming intelligent alien life.",
+          "start_char": 0,
+          "end_char": 132,
+          "salience_score": 0.75,
+          "claim_id": "claim_aa6ac557"
+        }
+      ],
+      "evidence": [
+        {
+          "evidence_id": "evid_2efd0e5a",
+          "claim_id": "claim_aa6ac557",
+          "source_domain": "reuters.com",
+          "source_url": "https://www.reuters.com/fact-check/nasa-mars-alien-cities-false-claim",
+          "title": "Fact Check: NASA has not discovered alien cities or structures on Mars",
+          "snippet": "Claims on social media asserting NASA rovers discovered ancient alien cities on Mars are false. NASA scientists confirmed no evidence of extraterrestrial civilizations or structures has been found.",
+          "relevance_score": 0.672,
+          "stance": "CONTRADICTS",
+          "stance_confidence": 0.98,
+          "retrieval_provider": "Reuters Fact Check"
+        }
+      ],
+      "explanation": {
+        "summary": "The assessment for 'NASA rovers have discovered ancient alien cities and extraterrestrial pyramid st...' is INSUFFICIENT EVIDENCE. Available external records do not provide adequate corroborated evidence to support or refute the claim with scientific certainty.",
+        "evidence_breakdown": "\u2022 WHAT WAS CLAIMED: \"NASA rovers have discovered ancient alien cities and extraterrestrial pyramid structures on Mars, confirming intelligent alien life.\"\n\u2022 EVIDENCE FOUND: Cross-referenced across 1 independent sources (0 supporting, 1 contradicting, 0 neutral).\n\u2022 CONTRADICTING FINDINGS: Refuted by reuters.com. Example finding: \"Claims on social media asserting NASA rovers discovered ancient alien cities on Mars are false. NASA scientists confirmed no evidence of ext...\"\n\u2022 REASONING & SUFFICIENCY: Evidence sufficiency evaluated at 32.3%. The final verdict is grounded in external consensus rather than model bias.",
+        "faithfulness_score": 1.0
+      },
+      "execution_stats": {
+        "processing_time_ms": 264.68,
+        "model_used": "logistic_regression",
+        "device": "cpu",
+        "claims_extracted": 1,
+        "evidence_sources_queried": 1,
+        "decision_rationale": "Insufficient evidence retrieved (<40% sufficiency threshold). Withholding definitive veracity verdict to prevent ungrounded prediction."
+      }
+    }
+  },
+  {
+    "scenario_id": "DEMO_3_MISLEADING",
+    "name": "Scenario 3: Misleading / Partially Supported Claim (High Conflict Stance)",
+    "response": {
+      "analysis_id": "bc714a51-843f-4464-809c-6532614519be",
+      "assessment": {
+        "state": "INSUFFICIENT_EVIDENCE",
+        "prediction_confidence": 0.5,
+        "calibrated_confidence": 0.35,
+        "evidence_sufficiency": 0.0,
+        "conflict_score": 0.0
+      },
+      "claims": [
+        {
+          "claim_text": "New federal solar subsidy legislation announced today will completely eliminate 100 percent of home electricity bills for every household without any fees.",
+          "source_sentence": "New federal solar subsidy legislation announced today will completely eliminate 100 percent of home electricity bills for every household without any fees.",
+          "start_char": 0,
+          "end_char": 155,
+          "salience_score": 0.9,
+          "claim_id": "claim_0942fee0"
+        }
+      ],
+      "evidence": [],
+      "explanation": {
+        "summary": "The assessment for 'New federal solar subsidy legislation announced today will completely eliminate ...' is INSUFFICIENT EVIDENCE. Available external records do not provide adequate corroborated evidence to support or refute the claim with scientific certainty.",
+        "evidence_breakdown": "\u2022 WHAT WAS CLAIMED: \"New federal solar subsidy legislation announced today will completely eliminate 100 percent of home electricity bills for every household without any fees.\"\n\u2022 EVIDENCE FOUND: Zero matching records found across accredited fact-checking archives and external repositories.\n\u2022 REASONING & SUFFICIENCY: Evidence sufficiency evaluated at 0.0%. The final verdict is grounded in external consensus rather than model bias.",
+        "faithfulness_score": 1.0
+      },
+      "execution_stats": {
+        "processing_time_ms": 246.18,
+        "model_used": "logistic_regression",
+        "device": "cpu",
+        "claims_extracted": 1,
+        "evidence_sources_queried": 0,
+        "decision_rationale": "Insufficient evidence retrieved (<40% sufficiency threshold). Withholding definitive veracity verdict to prevent ungrounded prediction."
+      }
+    }
+  },
+  {
+    "scenario_id": "DEMO_4_INSUFFICIENT",
+    "name": "Scenario 4: Insufficient Evidence Claim (Epistemic Gate Active)",
+    "response": {
+      "analysis_id": "f06cb15f-4eb6-43f0-bcd0-f9fc8d14602f",
+      "assessment": {
+        "state": "INSUFFICIENT_EVIDENCE",
+        "prediction_confidence": 0.5,
+        "calibrated_confidence": 0.35,
+        "evidence_sufficiency": 0.0,
+        "conflict_score": 0.0
+      },
+      "claims": [
+        {
+          "claim_text": "Henderson misplaced his brown leather briefcase behind the municipal library courtyard yesterday afternoon around three o'clock.",
+          "source_sentence": "Henderson misplaced his brown leather briefcase behind the municipal library courtyard yesterday afternoon around three o'clock.",
+          "start_char": 4,
+          "end_char": 132,
+          "salience_score": 0.65,
+          "claim_id": "claim_d36f92c1"
+        }
+      ],
+      "evidence": [],
+      "explanation": {
+        "summary": "The assessment for 'Henderson misplaced his brown leather briefcase behind the municipal library cou...' is INSUFFICIENT EVIDENCE. Available external records do not provide adequate corroborated evidence to support or refute the claim with scientific certainty.",
+        "evidence_breakdown": "\u2022 WHAT WAS CLAIMED: \"Henderson misplaced his brown leather briefcase behind the municipal library courtyard yesterday afternoon around three o'clock.\"\n\u2022 EVIDENCE FOUND: Zero matching records found across accredited fact-checking archives and external repositories.\n\u2022 REASONING & SUFFICIENCY: Evidence sufficiency evaluated at 0.0%. The final verdict is grounded in external consensus rather than model bias.",
+        "faithfulness_score": 1.0
+      },
+      "execution_stats": {
+        "processing_time_ms": 261.0,
+        "model_used": "logistic_regression",
+        "device": "cpu",
+        "claims_extracted": 1,
+        "evidence_sources_queried": 0,
+        "decision_rationale": "Insufficient evidence retrieved (<40% sufficiency threshold). Withholding definitive veracity verdict to prevent ungrounded prediction."
+      }
+    }
+  },
+  {
+    "scenario_id": "DEMO_5_MULTIMODAL",
+    "name": "Scenario 5: Multimodal Claim with Image (Visual Consistency Evaluated)",
+    "response": {
+      "analysis_id": "df174e82-ff60-4b7b-9869-6236fa75f38b",
+      "assessment": {
+        "state": "INSUFFICIENT_EVIDENCE",
+        "prediction_confidence": 0.5,
+        "calibrated_confidence": 0.35,
+        "evidence_sufficiency": 0.0,
+        "conflict_score": 0.0
+      },
+      "claims": [
+        {
+          "claim_text": "NASA engineers review spacecraft trajectory data and planetary exploration sensors for the Mars rover mission.",
+          "source_sentence": "NASA engineers review spacecraft trajectory data and planetary exploration sensors for the Mars rover mission.",
+          "start_char": 0,
+          "end_char": 110,
+          "salience_score": 0.75,
+          "claim_id": "claim_12b7dc51"
+        }
+      ],
+      "evidence": [],
+      "explanation": {
+        "summary": "The assessment for 'NASA engineers review spacecraft trajectory data and planetary exploration senso...' is INSUFFICIENT EVIDENCE. Available external records do not provide adequate corroborated evidence to support or refute the claim with scientific certainty.",
+        "evidence_breakdown": "\u2022 WHAT WAS CLAIMED: \"NASA engineers review spacecraft trajectory data and planetary exploration sensors for the Mars rover mission.\"\n\u2022 EVIDENCE FOUND: Zero matching records found across accredited fact-checking archives and external repositories.\n\u2022 REASONING & SUFFICIENCY: Evidence sufficiency evaluated at 0.0%. The final verdict is grounded in external consensus rather than model bias.",
+        "faithfulness_score": 1.0
+      },
+      "execution_stats": {
+        "processing_time_ms": 261.9,
+        "model_used": "logistic_regression",
+        "device": "cpu",
+        "claims_extracted": 1,
+        "evidence_sources_queried": 0,
+        "decision_rationale": "Insufficient evidence retrieved (<40% sufficiency threshold). Withholding definitive veracity verdict to prevent ungrounded prediction."
+      }
+    }
+  },
+  {
+    "scenario_id": "DEMO_6_MALFORMED",
+    "name": "Scenario 6: Malformed / Whitespace Input",
+    "result": {
+      "status": "exception_caught",
+      "error": "1 validation error for AnalyzeRequest\ntext\n  String should have at least 20 characters [type=string_too_short, input_value='   ', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_too_short"
+    }
+  }
+]
