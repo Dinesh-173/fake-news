@@ -3,11 +3,13 @@
 import time
 import uuid
 from contextlib import asynccontextmanager
+from pathlib import Path
 
 from fastapi import FastAPI, Request, Response, status
 from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse
+from fastapi.responses import FileResponse, JSONResponse
+from fastapi.staticfiles import StaticFiles
 
 from backend.app.api.v1.router import api_router
 from backend.app.core.config import settings
@@ -118,3 +120,24 @@ async def root_health():
 
 # Mount versioned API routes
 app.include_router(api_router, prefix=settings.API_V1_STR)
+
+# Static files directory
+STATIC_DIR = Path(__file__).resolve().parent / "static"
+if STATIC_DIR.exists():
+    app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
+
+
+# Root web application endpoint
+@app.get("/", response_class=FileResponse, tags=["Web UI"])
+async def root_app():
+    """Serves the interactive TruthLens web application."""
+    index_file = STATIC_DIR / "index.html"
+    if index_file.exists():
+        return FileResponse(index_file)
+    return await get_system_health()
+
+
+if __name__ == "__main__":
+    import uvicorn
+
+    uvicorn.run("backend.app.main:app", host=settings.HOST, port=settings.PORT, reload=False)
