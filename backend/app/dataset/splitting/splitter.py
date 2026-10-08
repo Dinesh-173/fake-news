@@ -3,6 +3,7 @@
 import random
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
+from typing import Any
 
 from backend.app.dataset.schemas import CanonicalNewsRecord, SplitStatistics
 
@@ -89,6 +90,13 @@ class DatasetSplitter:
         val_clusters: list[list[CanonicalNewsRecord]] = []
         test_clusters: list[list[CanonicalNewsRecord]] = []
 
+        reassignments: list[dict[str, Any]] = []
+        reassigned_count = 0
+        affected_clusters = 0
+        train_val_conflicts = 0
+        train_test_conflicts = 0
+        val_test_conflicts = 0
+
         if strategy == "temporal":
             # Sort clusters by minimum normalized publication date
             # Put clusters with missing dates deterministically at the start
@@ -128,7 +136,64 @@ class DatasetSplitter:
                 val_clusters.extend(cl_list[n_tr : n_tr + n_va])
                 test_clusters.extend(cl_list[n_tr + n_va :])
 
-        else:  # random
+        elif strategy == "official_benchmark_splits":
+            for cl in clusters:
+                orig_splits = {
+                    (r.original_split or r.split)
+                    for r in cl
+                    if (r.original_split or r.split)
+                }
+                # Normalize 'valid' -> 'val'
+                orig_splits = {"val" if s == "valid" else s for s in orig_splits}
+
+                if not orig_splits:
+                    target_split = "train"
+                elif len(orig_splits) == 1:
+                    target_split = next(iter(orig_splits))
+                else:
+                    # Cluster spans multiple partitions! Apply deterministic precedence: TRAIN > VAL > TEST
+                    affected_clusters += 1
+                    if "train" in orig_splits and "val" in orig_splits:
+                        train_val_conflicts += 1
+                    if "train" in orig_splits and "test" in orig_splits:
+                        train_test_conflicts += 1
+                    if "val" in orig_splits and "test" in orig_splits and "train" not in orig_splits:
+                        val_test_conflicts += 1
+
+                    if "train" in orig_splits:
+                        target_split = "train"
+                    elif "val" in orig_splits:
+                        target_split = "val"
+                    else:
+                        target_split = "test"
+
+                # Check if any records in cluster differ from target_split
+                for r in cl:
+                    orig = "val" if (r.original_split or r.split) == "valid" else (r.original_split or r.split)
+                    if orig and orig != target_split:
+                        reassigned_count += 1
+                        cluster_id = r.duplicate_group_id or r.near_duplicate_group_id or "cluster"
+                        reason = (
+                            f"Cluster isolation resolution (precedence: TRAIN > VAL > TEST) "
+                            f"to eliminate cross-split duplicate leakage from {orig} into {target_split}."
+                        )
+                        reassignments.append({
+                            "record_id": r.record_id,
+                            "original_id": r.original_id,
+                            "original_split": orig,
+                            "final_split": target_split,
+                            "cluster_id": cluster_id,
+                            "reassignment_reason": reason,
+                        })
+
+                if target_split == "train":
+                    train_clusters.append(cl)
+                elif target_split == "val":
+                    val_clusters.append(cl)
+                else:
+                    test_clusters.append(cl)
+
+        elif strategy == "random":
             rng.shuffle(clusters)
             n_clusters = len(clusters)
             train_end = int(n_clusters * r_train)
@@ -136,6 +201,12 @@ class DatasetSplitter:
             train_clusters = clusters[:train_end]
             val_clusters = clusters[train_end:val_end]
             test_clusters = clusters[val_end:]
+
+        else:
+            raise ValueError(
+                f"Unsupported splitting strategy: '{strategy}'. "
+                "Supported strategies are: 'stratified', 'temporal', 'random', 'official_benchmark_splits'."
+            )
 
         # Flatten and assign split tag
         final_records: list[CanonicalNewsRecord] = []
@@ -145,21 +216,66 @@ class DatasetSplitter:
 
         for cl in train_clusters:
             for r in cl:
+                orig = "val" if (r.original_split or r.split) == "valid" else (r.original_split or r.split)
+                reason = None
+                if orig and orig != "train":
+                    reason = (
+                        f"Cluster isolation resolution (precedence: TRAIN > VAL > TEST) "
+                        f"to eliminate cross-split duplicate leakage from {orig} into train."
+                    )
                 lbl = r.normalized_label or r.original_label
                 train_dist[lbl] += 1
-                final_records.append(r.model_copy(update={"split": "train"}))
+                final_records.append(
+                    r.model_copy(
+                        update={
+                            "split": "train",
+                            "original_split": orig or "train",
+                            "split_reassignment_reason": reason,
+                        }
+                    )
+                )
 
         for cl in val_clusters:
             for r in cl:
+                orig = "val" if (r.original_split or r.split) == "valid" else (r.original_split or r.split)
+                reason = None
+                if orig and orig != "val":
+                    reason = (
+                        f"Cluster isolation resolution (precedence: TRAIN > VAL > TEST) "
+                        f"to eliminate cross-split duplicate leakage from {orig} into val."
+                    )
                 lbl = r.normalized_label or r.original_label
                 val_dist[lbl] += 1
-                final_records.append(r.model_copy(update={"split": "val"}))
+                final_records.append(
+                    r.model_copy(
+                        update={
+                            "split": "val",
+                            "original_split": orig or "val",
+                            "split_reassignment_reason": reason,
+                        }
+                    )
+                )
 
         for cl in test_clusters:
             for r in cl:
+                orig = "val" if (r.original_split or r.split) == "valid" else (r.original_split or r.split)
+                reason = None
+                if orig and orig != "test":
+                    reason = (
+                        f"Cluster isolation resolution (precedence: TRAIN > VAL > TEST) "
+                        f"to eliminate cross-split duplicate leakage from {orig} into test."
+                    )
                 lbl = r.normalized_label or r.original_label
                 test_dist[lbl] += 1
-                final_records.append(r.model_copy(update={"split": "test"}))
+                final_records.append(
+                    r.model_copy(
+                        update={
+                            "split": "test",
+                            "original_split": orig or "test",
+                            "split_reassignment_reason": reason,
+                        }
+                    )
+                )
 
         split_stats = SplitStatistics(
             train_count=sum(train_dist.values()),
@@ -168,6 +284,12 @@ class DatasetSplitter:
             train_distribution=dict(train_dist),
             val_distribution=dict(val_dist),
             test_distribution=dict(test_dist),
+            reassigned_count=reassigned_count,
+            affected_clusters_count=affected_clusters,
+            train_val_conflicts=train_val_conflicts,
+            train_test_conflicts=train_test_conflicts,
+            val_test_conflicts=val_test_conflicts,
+            reassignments=reassignments,
         )
 
         return final_records, split_stats

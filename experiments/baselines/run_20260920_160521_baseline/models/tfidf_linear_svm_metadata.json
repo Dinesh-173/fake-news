@@ -1,0 +1,33 @@
+{
+  "model_name": "tfidf_linear_svm",
+  "experiment_id": "run_20260920_160521_baseline",
+  "saved_at": "2026-09-20T16:05:49.223927+00:00",
+  "sklearn_version": "1.9.0",
+  "dataset_manifest_hash": "b344c95400cbf91b2fc54fe8e4c06b89506398e7667863bee816d45ca4826330",
+  "model_params": {
+    "model_type": "TfidfLinearSVM",
+    "ngram_range": [
+      1,
+      2
+    ],
+    "min_df": 2,
+    "max_features": 25000,
+    "sublinear_tf": true,
+    "C": 0.5,
+    "class_weight": null,
+    "max_iter": 2000,
+    "random_state": 42,
+    "vocabulary_size": 25000,
+    "iterations_to_converge": 25,
+    "is_fitted": true
+  },
+  "extra": {
+    "desc": "uni+bigrams, C=0.5, unweighted",
+    "ngram": [
+      1,
+      2
+    ],
+    "C": 0.5,
+    "class_weight": null
+  }
+}

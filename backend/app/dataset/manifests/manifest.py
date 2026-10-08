@@ -26,6 +26,8 @@ class DatasetManifestGenerator:
         """Computes SHA-256 hash of a file on disk."""
         if not file_path.exists():
             return "FILE_NOT_FOUND"
+        if file_path.is_dir():
+            return "DIRECTORY"
         hasher = hashlib.sha256()
         with open(file_path, "rb") as f:
             for chunk in iter(lambda: f.read(65536), b""):

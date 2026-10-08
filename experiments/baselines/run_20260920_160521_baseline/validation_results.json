@@ -1,0 +1,101 @@
+[
+  {
+    "model_name": "Majority Classifier",
+    "config_desc": "Constant prediction (MISLEADING_OR_PARTIALLY_SUPPORTED)",
+    "macro_f1": 0.1833,
+    "accuracy": 0.3792,
+    "macro_precision": 0.1264,
+    "macro_recall": 0.3333,
+    "training_time_s": 0.004835299972910434
+  },
+  {
+    "model_name": "Logistic Regression",
+    "config_desc": "unigrams, C=1.0, unweighted",
+    "macro_f1": 0.4266,
+    "accuracy": 0.4324,
+    "macro_precision": 0.4325,
+    "macro_recall": 0.4266,
+    "training_time_s": 1.2803334000054747
+  },
+  {
+    "model_name": "Logistic Regression",
+    "config_desc": "uni+bigrams, C=0.5, unweighted",
+    "macro_f1": 0.4426,
+    "accuracy": 0.4574,
+    "macro_precision": 0.4592,
+    "macro_recall": 0.447,
+    "training_time_s": 2.393364500021562
+  },
+  {
+    "model_name": "Logistic Regression",
+    "config_desc": "uni+bigrams, C=1.0, unweighted",
+    "macro_f1": 0.4438,
+    "accuracy": 0.4543,
+    "macro_precision": 0.4528,
+    "macro_recall": 0.4461,
+    "training_time_s": 2.948694800026715
+  },
+  {
+    "model_name": "Logistic Regression",
+    "config_desc": "uni+bigrams, C=2.0, unweighted",
+    "macro_f1": 0.4332,
+    "accuracy": 0.4418,
+    "macro_precision": 0.4372,
+    "macro_recall": 0.435,
+    "training_time_s": 3.8967566000064835
+  },
+  {
+    "model_name": "Logistic Regression",
+    "config_desc": "uni+bigrams, C=1.0, balanced",
+    "macro_f1": 0.4512,
+    "accuracy": 0.4511,
+    "macro_precision": 0.4502,
+    "macro_recall": 0.4538,
+    "training_time_s": 2.39990099996794
+  },
+  {
+    "model_name": "Linear SVM",
+    "config_desc": "unigrams, C=1.0, unweighted",
+    "macro_f1": 0.4059,
+    "accuracy": 0.4097,
+    "macro_precision": 0.4077,
+    "macro_recall": 0.4058,
+    "training_time_s": 1.4973579000215977
+  },
+  {
+    "model_name": "Linear SVM",
+    "config_desc": "uni+bigrams, C=0.5, unweighted",
+    "macro_f1": 0.4351,
+    "accuracy": 0.4418,
+    "macro_precision": 0.4388,
+    "macro_recall": 0.4365,
+    "training_time_s": 1.4588931999751367
+  },
+  {
+    "model_name": "Linear SVM",
+    "config_desc": "uni+bigrams, C=1.0, unweighted",
+    "macro_f1": 0.4269,
+    "accuracy": 0.4324,
+    "macro_precision": 0.4297,
+    "macro_recall": 0.4279,
+    "training_time_s": 2.4379189000464976
+  },
+  {
+    "model_name": "Linear SVM",
+    "config_desc": "uni+bigrams, C=2.0, unweighted",
+    "macro_f1": 0.43,
+    "accuracy": 0.4347,
+    "macro_precision": 0.4317,
+    "macro_recall": 0.4308,
+    "training_time_s": 2.2295393000240438
+  },
+  {
+    "model_name": "Linear SVM",
+    "config_desc": "uni+bigrams, C=1.0, balanced",
+    "macro_f1": 0.4266,
+    "accuracy": 0.43,
+    "macro_precision": 0.427,
+    "macro_recall": 0.4273,
+    "training_time_s": 1.970531300001312
+  }
+]

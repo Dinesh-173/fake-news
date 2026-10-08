@@ -89,3 +89,11 @@ def test_full_dataset_pipeline_integration(tmp_path: Path):
     report_text = report_path.read_text(encoding="utf-8")
     assert "# TruthLens Dataset Quality Report: LIAR" in report_text
     assert "Unique Content Hashes (SHA-256)" in report_text
+
+
+if __name__ == "__main__":
+    import sys
+
+    import pytest
+
+    sys.exit(pytest.main([__file__, "-v"]))

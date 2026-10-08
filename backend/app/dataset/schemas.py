@@ -76,6 +76,12 @@ class CanonicalNewsRecord(BaseModel):
 
     # Experimental Partition
     split: str | None = Field(None, description="'train', 'val', or 'test'")
+    original_split: str | None = Field(
+        None, description="Original partition from raw benchmark ('train', 'val', 'test')"
+    )
+    split_reassignment_reason: str | None = Field(
+        None, description="Reason for partition reassignment to guarantee zero leakage"
+    )
 
 
 class ValidationSummary(BaseModel):
@@ -104,6 +110,12 @@ class SplitStatistics(BaseModel):
     train_distribution: dict[str, int] = Field(default_factory=dict)
     val_distribution: dict[str, int] = Field(default_factory=dict)
     test_distribution: dict[str, int] = Field(default_factory=dict)
+    reassigned_count: int = 0
+    affected_clusters_count: int = 0
+    train_val_conflicts: int = 0
+    train_test_conflicts: int = 0
+    val_test_conflicts: int = 0
+    reassignments: list[dict[str, Any]] = Field(default_factory=list)
 
 
 class DuplicateStatistics(BaseModel):

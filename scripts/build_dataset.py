@@ -49,7 +49,9 @@ def main():
     )
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument(
-        "--strategy", choices=["stratified", "temporal", "random"], default="stratified"
+        "--strategy",
+        choices=["stratified", "temporal", "random", "official_benchmark_splits"],
+        default="stratified",
     )
 
     args = parser.parse_args()

@@ -14,19 +14,22 @@ class LiarDatasetLoader(BaseDatasetLoader):
     def __init__(self):
         super().__init__(dataset_name="liar")
 
-    def load_records(self, source_path: Path) -> list[CanonicalNewsRecord]:
-        if not source_path.exists():
-            raise FileNotFoundError(f"LIAR dataset file not found at {source_path}")
-
+    def _load_single_tsv(
+        self, file_path: Path, default_split: str | None = None
+    ) -> list[CanonicalNewsRecord]:
         records: list[CanonicalNewsRecord] = []
-        with open(source_path, encoding="utf-8", errors="replace") as f:
+        with open(file_path, encoding="utf-8", errors="replace") as f:
             reader = csv.reader(f, delimiter="\t", quoting=csv.QUOTE_NONE)
             for row_idx, row in enumerate(reader):
                 if not row:
                     continue
                 # LIAR format specifies 14 columns
                 if len(row) < 3:
-                    logger.warning("Skipping malformed row %d with fewer than 3 columns", row_idx)
+                    logger.warning(
+                        "Skipping malformed row %d with fewer than 3 columns in %s",
+                        row_idx,
+                        file_path,
+                    )
                     continue
 
                 orig_id = row[0].strip() if len(row) > 0 else f"row_{row_idx}"
@@ -70,8 +73,53 @@ class LiarDatasetLoader(BaseDatasetLoader):
                     source_name_normalized=speaker,
                     original_label=orig_label,
                     metadata=metadata,
+                    split=default_split,
+                    original_split=default_split,
                 )
                 records.append(record)
+        return records
 
+    def load_records(self, source_path: Path) -> list[CanonicalNewsRecord]:
+        if not source_path.exists():
+            raise FileNotFoundError(f"LIAR dataset file or directory not found at {source_path}")
+
+        if source_path.is_dir():
+            train_p = source_path / "train.tsv"
+            valid_p = source_path / "valid.tsv"
+            if not valid_p.exists() and (source_path / "val.tsv").exists():
+                valid_p = source_path / "val.tsv"
+            test_p = source_path / "test.tsv"
+
+            if not (train_p.exists() and valid_p.exists() and test_p.exists()):
+                raise FileNotFoundError(
+                    f"Directory {source_path} is missing required LIAR benchmark TSV files (train.tsv, valid.tsv, test.tsv)"
+                )
+
+            train_records = self._load_single_tsv(train_p, default_split="train")
+            val_records = self._load_single_tsv(valid_p, default_split="val")
+            test_records = self._load_single_tsv(test_p, default_split="test")
+
+            total_records = len(train_records) + len(val_records) + len(test_records)
+            logger.info(
+                "Loaded authentic LIAR benchmark from %s: train=%d, val=%d, test=%d, total=%d",
+                source_path,
+                len(train_records),
+                len(val_records),
+                len(test_records),
+                total_records,
+            )
+            return train_records + val_records + test_records
+
+        # Single file fallback
+        fname = source_path.name.lower()
+        split = None
+        if "train" in fname:
+            split = "train"
+        elif "val" in fname or "valid" in fname:
+            split = "val"
+        elif "test" in fname:
+            split = "test"
+
+        records = self._load_single_tsv(source_path, default_split=split)
         logger.info("Loaded %d raw records from LIAR dataset %s", len(records), source_path)
         return records

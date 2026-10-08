@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 580" width="100%" height="100%" style="background:#FFFFFF; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+<rect width="680" height="580" fill="#FFFFFF" />
+<text x="40" y="40" font-size="18" font-weight="700" fill="#0F172A">Baseline B: TF-IDF + Logistic Regression — Test Confusion Matrix</text>
+<text x="40" y="62" font-size="12" fill="#64748B">Locked configuration: uni+bigrams, C=1.0, balanced | Macro-F1: 0.4253, Acc: 0.4285</text>
+<text x="360" y="65" font-size="13" font-weight="600" fill="#334155" text-anchor="middle">Predicted Veracity Class</text>
+<text x="30" y="280" font-size="13" font-weight="600" fill="#334155" text-anchor="middle" transform="rotate(-90 30 280)">Ground Truth Class</text>
+<text x="240" y="88" font-size="11" font-weight="600" fill="#475569" text-anchor="middle">LIKELY_FALSE</text>
+<text x="360" y="88" font-size="11" font-weight="600" fill="#475569" text-anchor="middle">LIKELY_TRUE</text>
+<text x="480" y="88" font-size="11" font-weight="600" fill="#475569" text-anchor="middle">MISLEADING</text>
+<text x="168" y="164" font-size="11" font-weight="600" fill="#475569" text-anchor="end">LIKELY_FALSE</text>
+<rect x="180" y="100" width="120" height="120" fill="rgb(152,171,222)" stroke="#CBD5E1" stroke-width="1" />
+<text x="240" y="156" font-size="15" font-weight="700" fill="#0F172A" text-anchor="middle">140</text>
+<text x="240" y="174" font-size="11" font-weight="500" fill="#0F172A" opacity="0.9" text-anchor="middle">41.2%</text>
+<rect x="300" y="100" width="120" height="120" fill="rgb(247,195,206)" stroke="#CBD5E1" stroke-width="1" />
+<text x="360" y="156" font-size="15" font-weight="700" fill="#0F172A" text-anchor="middle">90</text>
+<text x="360" y="174" font-size="11" font-weight="500" fill="#0F172A" opacity="0.9" text-anchor="middle">26.5%</text>
+<rect x="420" y="100" width="120" height="120" fill="rgb(245,181,195)" stroke="#CBD5E1" stroke-width="1" />
+<text x="480" y="156" font-size="15" font-weight="700" fill="#0F172A" text-anchor="middle">110</text>
+<text x="480" y="174" font-size="11" font-weight="500" fill="#0F172A" opacity="0.9" text-anchor="middle">32.4%</text>
+<text x="168" y="284" font-size="11" font-weight="600" fill="#475569" text-anchor="end">LIKELY_TRUE</text>
+<rect x="180" y="220" width="120" height="120" fill="rgb(249,210,219)" stroke="#CBD5E1" stroke-width="1" />
+<text x="240" y="276" font-size="15" font-weight="700" fill="#0F172A" text-anchor="middle">90</text>
+<text x="240" y="294" font-size="11" font-weight="500" fill="#0F172A" opacity="0.9" text-anchor="middle">19.6%</text>
+<rect x="300" y="220" width="120" height="120" fill="rgb(133,154,214)" stroke="#CBD5E1" stroke-width="1" />
+<text x="360" y="276" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">231</text>
+<text x="360" y="294" font-size="11" font-weight="500" fill="#FFFFFF" opacity="0.9" text-anchor="middle">50.3%</text>
+<rect x="420" y="220" width="120" height="120" fill="rgb(245,187,199)" stroke="#CBD5E1" stroke-width="1" />
+<text x="480" y="276" font-size="15" font-weight="700" fill="#0F172A" text-anchor="middle">138</text>
+<text x="480" y="294" font-size="11" font-weight="500" fill="#0F172A" opacity="0.9" text-anchor="middle">30.1%</text>
+<text x="168" y="404" font-size="11" font-weight="600" fill="#475569" text-anchor="end">MISLEADING</text>
+<rect x="180" y="340" width="120" height="120" fill="rgb(246,192,204)" stroke="#CBD5E1" stroke-width="1" />
+<text x="240" y="396" font-size="15" font-weight="700" fill="#0F172A" text-anchor="middle">133</text>
+<text x="240" y="414" font-size="11" font-weight="500" fill="#0F172A" opacity="0.9" text-anchor="middle">27.7%</text>
+<rect x="300" y="340" width="120" height="120" fill="rgb(244,174,190)" stroke="#CBD5E1" stroke-width="1" />
+<text x="360" y="396" font-size="15" font-weight="700" fill="#0F172A" text-anchor="middle">170</text>
+<text x="360" y="414" font-size="11" font-weight="500" fill="#0F172A" opacity="0.9" text-anchor="middle">35.4%</text>
+<rect x="420" y="340" width="120" height="120" fill="rgb(161,178,225)" stroke="#CBD5E1" stroke-width="1" />
+<text x="480" y="396" font-size="15" font-weight="700" fill="#0F172A" text-anchor="middle">177</text>
+<text x="480" y="414" font-size="11" font-weight="500" fill="#0F172A" opacity="0.9" text-anchor="middle">36.9%</text>
+</svg>

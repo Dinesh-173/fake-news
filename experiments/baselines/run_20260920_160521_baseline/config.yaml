@@ -1,0 +1,50 @@
+experiment_id: run_20260920_160521_baseline
+phase: Phase 4 Classical ML Baselines
+timestamp_utc: '2026-09-20T16:05:47.563864+00:00'
+git_commit: cfcbf14bc74fe68c602c5133d54e0da8b55c16d3
+python_version: 3.14.7 (tags/v3.14.7:823f032, Aug  5 2026, 10:51:32) [MSC v.1944 64
+  bit (AMD64)]
+sklearn_version: 1.9.0
+seed: 42
+primary_selection_metric: validation_macro_f1
+dataset_source: data\processed\liar
+dataset_manifest_hash: b344c95400cbf91b2fc54fe8e4c06b89506398e7667863bee816d45ca4826330
+locked_configurations:
+  majority:
+    majority_label: MISLEADING_OR_PARTIALLY_SUPPORTED
+  logreg:
+    desc: uni+bigrams, C=1.0, balanced
+    val_macro_f1: 0.4512
+    params:
+      model_type: TfidfLogisticRegression
+      ngram_range:
+      - 1
+      - 2
+      min_df: 2
+      max_features: 25000
+      sublinear_tf: true
+      C: 1.0
+      class_weight: balanced
+      max_iter: 1000
+      random_state: 42
+      vocabulary_size: 25000
+      iterations_to_converge: 46
+      is_fitted: true
+  svm:
+    desc: uni+bigrams, C=0.5, unweighted
+    val_macro_f1: 0.4351
+    params:
+      model_type: TfidfLinearSVM
+      ngram_range:
+      - 1
+      - 2
+      min_df: 2
+      max_features: 25000
+      sublinear_tf: true
+      C: 0.5
+      class_weight: null
+      max_iter: 2000
+      random_state: 42
+      vocabulary_size: 25000
+      iterations_to_converge: 25
+      is_fitted: true

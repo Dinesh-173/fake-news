@@ -1,0 +1,29 @@
+[
+  {
+    "model_name": "Majority Classifier",
+    "accuracy": 0.3753,
+    "macro_f1": 0.1819,
+    "macro_precision": 0.1251,
+    "macro_recall": 0.3333,
+    "weighted_f1": 0.2048,
+    "inference_time_s": 0.0003774999640882015
+  },
+  {
+    "model_name": "TF-IDF + Logistic Regression (uni+bigrams, C=1.0, balanced)",
+    "accuracy": 0.4285,
+    "macro_f1": 0.4253,
+    "macro_precision": 0.4242,
+    "macro_recall": 0.4279,
+    "weighted_f1": 0.4272,
+    "inference_time_s": 0.1496805000351742
+  },
+  {
+    "model_name": "TF-IDF + Linear SVM (uni+bigrams, C=0.5, unweighted)",
+    "accuracy": 0.4175,
+    "macro_f1": 0.4101,
+    "macro_precision": 0.4144,
+    "macro_recall": 0.4096,
+    "weighted_f1": 0.4148,
+    "inference_time_s": 0.2813233999768272
+  }
+]

@@ -1,0 +1,221 @@
+{
+  "majority": {
+    "total_samples": 1279,
+    "overall": {
+      "accuracy": 0.3753,
+      "macro_precision": 0.1251,
+      "macro_recall": 0.3333,
+      "macro_f1": 0.1819,
+      "weighted_precision": 0.1408,
+      "weighted_recall": 0.3753,
+      "weighted_f1": 0.2048
+    },
+    "per_class": {
+      "LIKELY_FALSE": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "support": 340
+      },
+      "LIKELY_TRUE": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "support": 459
+      },
+      "MISLEADING_OR_PARTIALLY_SUPPORTED": {
+        "precision": 0.3752931978107897,
+        "recall": 1.0,
+        "f1_score": 0.5457646389994315,
+        "support": 480
+      }
+    },
+    "confusion_matrix": {
+      "classes": [
+        "LIKELY_FALSE",
+        "LIKELY_TRUE",
+        "MISLEADING_OR_PARTIALLY_SUPPORTED"
+      ],
+      "matrix": [
+        [
+          0,
+          0,
+          340
+        ],
+        [
+          0,
+          0,
+          459
+        ],
+        [
+          0,
+          0,
+          480
+        ]
+      ],
+      "matrix_normalized_percent": [
+        [
+          0.0,
+          0.0,
+          100.0
+        ],
+        [
+          0.0,
+          0.0,
+          100.0
+        ],
+        [
+          0.0,
+          0.0,
+          100.0
+        ]
+      ]
+    }
+  },
+  "logistic_regression": {
+    "total_samples": 1279,
+    "overall": {
+      "accuracy": 0.4285,
+      "macro_precision": 0.4242,
+      "macro_recall": 0.4279,
+      "macro_f1": 0.4253,
+      "weighted_precision": 0.4277,
+      "weighted_recall": 0.4285,
+      "weighted_f1": 0.4272
+    },
+    "per_class": {
+      "LIKELY_FALSE": {
+        "precision": 0.3856749311294766,
+        "recall": 0.4117647058823529,
+        "f1_score": 0.39829302987197723,
+        "support": 340
+      },
+      "LIKELY_TRUE": {
+        "precision": 0.47046843177189407,
+        "recall": 0.5032679738562091,
+        "f1_score": 0.4863157894736842,
+        "support": 459
+      },
+      "MISLEADING_OR_PARTIALLY_SUPPORTED": {
+        "precision": 0.4164705882352941,
+        "recall": 0.36875,
+        "f1_score": 0.3911602209944751,
+        "support": 480
+      }
+    },
+    "confusion_matrix": {
+      "classes": [
+        "LIKELY_FALSE",
+        "LIKELY_TRUE",
+        "MISLEADING_OR_PARTIALLY_SUPPORTED"
+      ],
+      "matrix": [
+        [
+          140,
+          90,
+          110
+        ],
+        [
+          90,
+          231,
+          138
+        ],
+        [
+          133,
+          170,
+          177
+        ]
+      ],
+      "matrix_normalized_percent": [
+        [
+          41.18,
+          26.47,
+          32.35
+        ],
+        [
+          19.61,
+          50.33,
+          30.07
+        ],
+        [
+          27.71,
+          35.42,
+          36.88
+        ]
+      ]
+    }
+  },
+  "linear_svm": {
+    "total_samples": 1279,
+    "overall": {
+      "accuracy": 0.4175,
+      "macro_precision": 0.4144,
+      "macro_recall": 0.4096,
+      "macro_f1": 0.4101,
+      "weighted_precision": 0.4154,
+      "weighted_recall": 0.4175,
+      "weighted_f1": 0.4148
+    },
+    "per_class": {
+      "LIKELY_FALSE": {
+        "precision": 0.4,
+        "recall": 0.3235294117647059,
+        "f1_score": 0.35772357723577236,
+        "support": 340
+      },
+      "LIKELY_TRUE": {
+        "precision": 0.44854368932038835,
+        "recall": 0.5032679738562091,
+        "f1_score": 0.47433264887063653,
+        "support": 459
+      },
+      "MISLEADING_OR_PARTIALLY_SUPPORTED": {
+        "precision": 0.3946830265848671,
+        "recall": 0.40208333333333335,
+        "f1_score": 0.39834881320949433,
+        "support": 480
+      }
+    },
+    "confusion_matrix": {
+      "classes": [
+        "LIKELY_FALSE",
+        "LIKELY_TRUE",
+        "MISLEADING_OR_PARTIALLY_SUPPORTED"
+      ],
+      "matrix": [
+        [
+          110,
+          101,
+          129
+        ],
+        [
+          61,
+          231,
+          167
+        ],
+        [
+          104,
+          183,
+          193
+        ]
+      ],
+      "matrix_normalized_percent": [
+        [
+          32.35,
+          29.71,
+          37.94
+        ],
+        [
+          13.29,
+          50.33,
+          36.38
+        ],
+        [
+          21.67,
+          38.12,
+          40.21
+        ]
+      ]
+    }
+  }
+}

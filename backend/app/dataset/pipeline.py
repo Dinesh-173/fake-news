@@ -141,6 +141,10 @@ class DatasetPipeline:
             "val_split": val_jsonl_path,
             "test_split": test_jsonl_path,
         }
+        if source_path.is_dir():
+            for f in sorted(source_path.iterdir()):
+                if f.is_file():
+                    artifact_files[f"source_raw_{f.name}"] = f
 
         # 8. Manifest & Quality Report
         manifest = DatasetManifestGenerator.generate_manifest(

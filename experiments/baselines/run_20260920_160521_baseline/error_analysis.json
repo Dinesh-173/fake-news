@@ -1,0 +1,396 @@
+{
+  "total_errors": 745,
+  "error_rate": 0.5825,
+  "most_overconfident_errors": [
+    {
+      "index": 831,
+      "record_id": "e508dbe8-47c1-5865-8bfe-527802627a0e",
+      "original_id": "6263.json",
+      "statement": "There are 60,000 fewer jobs today in this state than we had in 2008.",
+      "speaker": "ovide-lamontagne",
+      "ground_truth": "MISLEADING_OR_PARTIALLY_SUPPORTED",
+      "predicted": "LIKELY_TRUE",
+      "confidence": 0.7746,
+      "true_class_probability": 0.0888,
+      "probabilities": {
+        "LIKELY_FALSE": 0.1366,
+        "LIKELY_TRUE": 0.7746,
+        "MISLEADING_OR_PARTIALLY_SUPPORTED": 0.0888
+      },
+      "predicted_probability": 0.7746
+    },
+    {
+      "index": 1194,
+      "record_id": "4a791736-0f70-551c-a2a8-f2b4de4b9e9f",
+      "original_id": "9231.json",
+      "statement": "More than 1,000 American soldiers have lost their lives in Afghanistan in the last 27 months. This is more than the combined total of the nine years before.",
+      "speaker": "chain-email",
+      "ground_truth": "LIKELY_FALSE",
+      "predicted": "LIKELY_TRUE",
+      "confidence": 0.754,
+      "true_class_probability": 0.1076,
+      "probabilities": {
+        "LIKELY_FALSE": 0.1076,
+        "LIKELY_TRUE": 0.754,
+        "MISLEADING_OR_PARTIALLY_SUPPORTED": 0.1384
+      },
+      "predicted_probability": 0.754
+    },
+    {
+      "index": 712,
+      "record_id": "05357495-e3d0-56f4-b705-50271adc719c",
+      "original_id": "457.json",
+      "statement": "\"McCain has voted repeatedly at least six times against funding for global HIV/AIDS, malaria and TB fund, once as one of only 14 senators.\"",
+      "speaker": "democratic-national-committee",
+      "ground_truth": "MISLEADING_OR_PARTIALLY_SUPPORTED",
+      "predicted": "LIKELY_TRUE",
+      "confidence": 0.7493,
+      "true_class_probability": 0.1386,
+      "probabilities": {
+        "LIKELY_FALSE": 0.1121,
+        "LIKELY_TRUE": 0.7493,
+        "MISLEADING_OR_PARTIALLY_SUPPORTED": 0.1386
+      },
+      "predicted_probability": 0.7493
+    },
+    {
+      "index": 199,
+      "record_id": "4e7544d8-1de3-5ba0-9dbf-c24a5c85368c",
+      "original_id": "6431.json",
+      "statement": "Gov. Romney himself, with 28 other Republican governors, supported policies that would have eliminated the time limits in the welfare reform law and allowed people to stay on welfare forever.",
+      "speaker": "jay-carney",
+      "ground_truth": "LIKELY_FALSE",
+      "predicted": "MISLEADING_OR_PARTIALLY_SUPPORTED",
+      "confidence": 0.7452,
+      "true_class_probability": 0.0821,
+      "probabilities": {
+        "LIKELY_FALSE": 0.0821,
+        "LIKELY_TRUE": 0.1727,
+        "MISLEADING_OR_PARTIALLY_SUPPORTED": 0.7452
+      },
+      "predicted_probability": 0.7452
+    },
+    {
+      "index": 282,
+      "record_id": "74d0c08a-d375-579d-8d5b-6ec9fbc5fa19",
+      "original_id": "8151.json",
+      "statement": "Of the roughly 15 percent of Americans who dont have health insurance, half of them made more than $50,000 a year.",
+      "speaker": "rand-paul",
+      "ground_truth": "LIKELY_FALSE",
+      "predicted": "LIKELY_TRUE",
+      "confidence": 0.7349,
+      "true_class_probability": 0.0714,
+      "probabilities": {
+        "LIKELY_FALSE": 0.0714,
+        "LIKELY_TRUE": 0.7349,
+        "MISLEADING_OR_PARTIALLY_SUPPORTED": 0.1937
+      },
+      "predicted_probability": 0.7349
+    }
+  ],
+  "most_ambiguous_errors": [
+    {
+      "index": 86,
+      "record_id": "15fb5c10-3790-5a30-adca-242fb8f0deef",
+      "original_id": "12309.json",
+      "statement": "The decision for the United States to buy heavy water from Iran will directly subsidize Irans nuclear program.",
+      "speaker": "paul-ryan",
+      "ground_truth": "MISLEADING_OR_PARTIALLY_SUPPORTED",
+      "predicted": "LIKELY_FALSE",
+      "confidence": 0.3362,
+      "true_class_probability": 0.3343,
+      "probabilities": {
+        "LIKELY_FALSE": 0.3362,
+        "LIKELY_TRUE": 0.3295,
+        "MISLEADING_OR_PARTIALLY_SUPPORTED": 0.3343
+      },
+      "predicted_probability": 0.3362
+    },
+    {
+      "index": 658,
+      "record_id": "7af8f620-0a3d-5af7-9ca2-764708b486e7",
+      "original_id": "9462.json",
+      "statement": "When Rick Scott was deposed in lawsuits about his company, he took the Fifth 75 times.",
+      "speaker": "florida-democratic-party",
+      "ground_truth": "LIKELY_TRUE",
+      "predicted": "LIKELY_FALSE",
+      "confidence": 0.3376,
+      "true_class_probability": 0.3351,
+      "probabilities": {
+        "LIKELY_FALSE": 0.3376,
+        "LIKELY_TRUE": 0.3351,
+        "MISLEADING_OR_PARTIALLY_SUPPORTED": 0.3273
+      },
+      "predicted_probability": 0.3376
+    },
+    {
+      "index": 31,
+      "record_id": "76ccabb7-2bd8-5deb-8623-ad784ad2a74b",
+      "original_id": "9800.json",
+      "statement": "Under Rosemary Lehmberg, the Travis County D.A.s office convened the grand jury that indicted Rick Perry.",
+      "speaker": "sarah-palin",
+      "ground_truth": "LIKELY_FALSE",
+      "predicted": "MISLEADING_OR_PARTIALLY_SUPPORTED",
+      "confidence": 0.3389,
+      "true_class_probability": 0.3251,
+      "probabilities": {
+        "LIKELY_FALSE": 0.3251,
+        "LIKELY_TRUE": 0.336,
+        "MISLEADING_OR_PARTIALLY_SUPPORTED": 0.3389
+      },
+      "predicted_probability": 0.3389
+    },
+    {
+      "index": 638,
+      "record_id": "d8b4d5b5-4007-5072-bdcd-7f3db094d79f",
+      "original_id": "3366.json",
+      "statement": "A telephone company will no longer have to provide landline service to customers if there is an alternative provider, including wireless.",
+      "speaker": "ward-armstrong",
+      "ground_truth": "LIKELY_TRUE",
+      "predicted": "MISLEADING_OR_PARTIALLY_SUPPORTED",
+      "confidence": 0.3406,
+      "true_class_probability": 0.3356,
+      "probabilities": {
+        "LIKELY_FALSE": 0.3238,
+        "LIKELY_TRUE": 0.3356,
+        "MISLEADING_OR_PARTIALLY_SUPPORTED": 0.3406
+      },
+      "predicted_probability": 0.3406
+    },
+    {
+      "index": 146,
+      "record_id": "95fbf86b-7bca-5190-9949-a2fa38d9f4b5",
+      "original_id": "8606.json",
+      "statement": "Republicans have proposed dozens of (health care) solutions designed to help control costs and improve quality.",
+      "speaker": "ron-johnson",
+      "ground_truth": "MISLEADING_OR_PARTIALLY_SUPPORTED",
+      "predicted": "LIKELY_FALSE",
+      "confidence": 0.341,
+      "true_class_probability": 0.3212,
+      "probabilities": {
+        "LIKELY_FALSE": 0.341,
+        "LIKELY_TRUE": 0.3378,
+        "MISLEADING_OR_PARTIALLY_SUPPORTED": 0.3212
+      },
+      "predicted_probability": 0.341
+    }
+  ],
+  "confusion_cell_samples": {
+    "LIKELY_FALSE -> LIKELY_TRUE": [
+      {
+        "index": 1194,
+        "record_id": "4a791736-0f70-551c-a2a8-f2b4de4b9e9f",
+        "original_id": "9231.json",
+        "statement": "More than 1,000 American soldiers have lost their lives in Afghanistan in the last 27 months. This is more than the combined total of the nine years before.",
+        "speaker": "chain-email",
+        "ground_truth": "LIKELY_FALSE",
+        "predicted": "LIKELY_TRUE",
+        "confidence": 0.754,
+        "true_class_probability": 0.1076,
+        "probabilities": {
+          "LIKELY_FALSE": 0.1076,
+          "LIKELY_TRUE": 0.754,
+          "MISLEADING_OR_PARTIALLY_SUPPORTED": 0.1384
+        },
+        "predicted_probability": 0.754
+      },
+      {
+        "index": 282,
+        "record_id": "74d0c08a-d375-579d-8d5b-6ec9fbc5fa19",
+        "original_id": "8151.json",
+        "statement": "Of the roughly 15 percent of Americans who dont have health insurance, half of them made more than $50,000 a year.",
+        "speaker": "rand-paul",
+        "ground_truth": "LIKELY_FALSE",
+        "predicted": "LIKELY_TRUE",
+        "confidence": 0.7349,
+        "true_class_probability": 0.0714,
+        "probabilities": {
+          "LIKELY_FALSE": 0.0714,
+          "LIKELY_TRUE": 0.7349,
+          "MISLEADING_OR_PARTIALLY_SUPPORTED": 0.1937
+        },
+        "predicted_probability": 0.7349
+      }
+    ],
+    "LIKELY_FALSE -> MISLEADING_OR_PARTIALLY_SUPPORTED": [
+      {
+        "index": 199,
+        "record_id": "4e7544d8-1de3-5ba0-9dbf-c24a5c85368c",
+        "original_id": "6431.json",
+        "statement": "Gov. Romney himself, with 28 other Republican governors, supported policies that would have eliminated the time limits in the welfare reform law and allowed people to stay on welfare forever.",
+        "speaker": "jay-carney",
+        "ground_truth": "LIKELY_FALSE",
+        "predicted": "MISLEADING_OR_PARTIALLY_SUPPORTED",
+        "confidence": 0.7452,
+        "true_class_probability": 0.0821,
+        "probabilities": {
+          "LIKELY_FALSE": 0.0821,
+          "LIKELY_TRUE": 0.1727,
+          "MISLEADING_OR_PARTIALLY_SUPPORTED": 0.7452
+        },
+        "predicted_probability": 0.7452
+      },
+      {
+        "index": 109,
+        "record_id": "a1eb47aa-8cba-559a-8c12-a665b3fd5bd4",
+        "original_id": "6821.json",
+        "statement": "(Barack Obama) says hes going to reduce the long-term debt and deficit by $4 trillion, doesnt say how hes going to do it.",
+        "speaker": "chris-christie",
+        "ground_truth": "LIKELY_FALSE",
+        "predicted": "MISLEADING_OR_PARTIALLY_SUPPORTED",
+        "confidence": 0.616,
+        "true_class_probability": 0.1894,
+        "probabilities": {
+          "LIKELY_FALSE": 0.1894,
+          "LIKELY_TRUE": 0.1946,
+          "MISLEADING_OR_PARTIALLY_SUPPORTED": 0.616
+        },
+        "predicted_probability": 0.616
+      }
+    ],
+    "LIKELY_TRUE -> LIKELY_FALSE": [
+      {
+        "index": 266,
+        "record_id": "85b62dba-c5c1-5986-a4cf-367d264326ec",
+        "original_id": "3575.json",
+        "statement": "On federal stimulus money for expanding rail service.",
+        "speaker": "scott-walker",
+        "ground_truth": "LIKELY_TRUE",
+        "predicted": "LIKELY_FALSE",
+        "confidence": 0.5909,
+        "true_class_probability": 0.152,
+        "probabilities": {
+          "LIKELY_FALSE": 0.5909,
+          "LIKELY_TRUE": 0.152,
+          "MISLEADING_OR_PARTIALLY_SUPPORTED": 0.257
+        },
+        "predicted_probability": 0.5909
+      },
+      {
+        "index": 521,
+        "record_id": "f976ad5f-2dc6-5e2b-ac3f-ffb8c870dc39",
+        "original_id": "6745.json",
+        "statement": "Says Barack Obamas comments indicate he believes in redistribution of wealth.",
+        "speaker": "mitt-romney",
+        "ground_truth": "LIKELY_TRUE",
+        "predicted": "LIKELY_FALSE",
+        "confidence": 0.5814,
+        "true_class_probability": 0.2354,
+        "probabilities": {
+          "LIKELY_FALSE": 0.5814,
+          "LIKELY_TRUE": 0.2354,
+          "MISLEADING_OR_PARTIALLY_SUPPORTED": 0.1832
+        },
+        "predicted_probability": 0.5814
+      }
+    ],
+    "LIKELY_TRUE -> MISLEADING_OR_PARTIALLY_SUPPORTED": [
+      {
+        "index": 503,
+        "record_id": "2cff34fc-6573-51fd-a104-73198b24de09",
+        "original_id": "6532.json",
+        "statement": "His new running mate, Congressman Ryan, put forward a plan that would let Governor Romney pay less than 1 percent in taxes each year.",
+        "speaker": "barack-obama",
+        "ground_truth": "LIKELY_TRUE",
+        "predicted": "MISLEADING_OR_PARTIALLY_SUPPORTED",
+        "confidence": 0.7107,
+        "true_class_probability": 0.1731,
+        "probabilities": {
+          "LIKELY_FALSE": 0.1162,
+          "LIKELY_TRUE": 0.1731,
+          "MISLEADING_OR_PARTIALLY_SUPPORTED": 0.7107
+        },
+        "predicted_probability": 0.7107
+      },
+      {
+        "index": 727,
+        "record_id": "b295e30b-d95a-583c-aa0c-de14682a056d",
+        "original_id": "9435.json",
+        "statement": "By the time I left the State Department, economic growth was up and opium production was down in Afghanistan, while infant mortality declined and school enrollment rose by more than sevenfold.",
+        "speaker": "hillary-clinton",
+        "ground_truth": "LIKELY_TRUE",
+        "predicted": "MISLEADING_OR_PARTIALLY_SUPPORTED",
+        "confidence": 0.7105,
+        "true_class_probability": 0.2102,
+        "probabilities": {
+          "LIKELY_FALSE": 0.0793,
+          "LIKELY_TRUE": 0.2102,
+          "MISLEADING_OR_PARTIALLY_SUPPORTED": 0.7105
+        },
+        "predicted_probability": 0.7105
+      }
+    ],
+    "MISLEADING_OR_PARTIALLY_SUPPORTED -> LIKELY_FALSE": [
+      {
+        "index": 876,
+        "record_id": "f8783388-26bb-5cc3-9f95-9575dbeee7f2",
+        "original_id": "13029.json",
+        "statement": "Says Patrick Murphy never worked as a CPA and was never a small business owner.",
+        "speaker": "national-republican-senatorial-committee",
+        "ground_truth": "MISLEADING_OR_PARTIALLY_SUPPORTED",
+        "predicted": "LIKELY_FALSE",
+        "confidence": 0.7341,
+        "true_class_probability": 0.1079,
+        "probabilities": {
+          "LIKELY_FALSE": 0.7341,
+          "LIKELY_TRUE": 0.158,
+          "MISLEADING_OR_PARTIALLY_SUPPORTED": 0.1079
+        },
+        "predicted_probability": 0.7341
+      },
+      {
+        "index": 916,
+        "record_id": "a670f7dd-6d52-57d3-afca-0358c9fbafba",
+        "original_id": "6945.json",
+        "statement": "Sherrod Brown supported President Obamas $453 billion tax increase.",
+        "speaker": "crossroads-gps",
+        "ground_truth": "MISLEADING_OR_PARTIALLY_SUPPORTED",
+        "predicted": "LIKELY_FALSE",
+        "confidence": 0.7246,
+        "true_class_probability": 0.1369,
+        "probabilities": {
+          "LIKELY_FALSE": 0.7246,
+          "LIKELY_TRUE": 0.1385,
+          "MISLEADING_OR_PARTIALLY_SUPPORTED": 0.1369
+        },
+        "predicted_probability": 0.7246
+      }
+    ],
+    "MISLEADING_OR_PARTIALLY_SUPPORTED -> LIKELY_TRUE": [
+      {
+        "index": 831,
+        "record_id": "e508dbe8-47c1-5865-8bfe-527802627a0e",
+        "original_id": "6263.json",
+        "statement": "There are 60,000 fewer jobs today in this state than we had in 2008.",
+        "speaker": "ovide-lamontagne",
+        "ground_truth": "MISLEADING_OR_PARTIALLY_SUPPORTED",
+        "predicted": "LIKELY_TRUE",
+        "confidence": 0.7746,
+        "true_class_probability": 0.0888,
+        "probabilities": {
+          "LIKELY_FALSE": 0.1366,
+          "LIKELY_TRUE": 0.7746,
+          "MISLEADING_OR_PARTIALLY_SUPPORTED": 0.0888
+        },
+        "predicted_probability": 0.7746
+      },
+      {
+        "index": 712,
+        "record_id": "05357495-e3d0-56f4-b705-50271adc719c",
+        "original_id": "457.json",
+        "statement": "\"McCain has voted repeatedly at least six times against funding for global HIV/AIDS, malaria and TB fund, once as one of only 14 senators.\"",
+        "speaker": "democratic-national-committee",
+        "ground_truth": "MISLEADING_OR_PARTIALLY_SUPPORTED",
+        "predicted": "LIKELY_TRUE",
+        "confidence": 0.7493,
+        "true_class_probability": 0.1386,
+        "probabilities": {
+          "LIKELY_FALSE": 0.1121,
+          "LIKELY_TRUE": 0.7493,
+          "MISLEADING_OR_PARTIALLY_SUPPORTED": 0.1386
+        },
+        "predicted_probability": 0.7493
+      }
+    ]
+  }
+}

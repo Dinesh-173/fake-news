@@ -46,6 +46,29 @@ class QualityReporter:
         # Duplicate stats
         ds = manifest.duplicate_statistics
 
+        reassign_sec = ""
+        if ss.reassigned_count > 0:
+            reassign_rows = []
+            for item in ss.reassignments:
+                reassign_rows.append(
+                    f"| `{item.get('original_id', '')}` | `{item.get('original_split', '')}` | "
+                    f"`{item.get('final_split', '')}` | `{item.get('cluster_id', '')}` | "
+                    f"{item.get('reassignment_reason', '')} |"
+                )
+            reassign_table = "\n".join(reassign_rows)
+            reassign_sec = f"""
+### 6.2 Cluster Isolation Reassignments (Leakage Defense)
+* **Reassigned Records**: {ss.reassigned_count:,}
+* **Affected Clusters**: {ss.affected_clusters_count:,}
+* **Train ↔ Validation Conflicts**: {ss.train_val_conflicts:,}
+* **Train ↔ Test Conflicts**: {ss.train_test_conflicts:,}
+* **Validation ↔ Test Conflicts**: {ss.val_test_conflicts:,}
+
+| Record ID | Original Split | Final Split | Cluster ID | Reason |
+| :--- | :--- | :--- | :--- | :--- |
+{reassign_table}
+"""
+
         report = f"""# TruthLens Dataset Quality Report: {manifest.dataset_name.upper()} ({manifest.dataset_version})
 
 ## 1. Dataset Provenance & Metadata
@@ -114,7 +137,7 @@ class QualityReporter:
 * **Train**: `{dict(ss.train_distribution)}`
 * **Validation**: `{dict(ss.val_distribution)}`
 * **Test**: `{dict(ss.test_distribution)}`
-
+{reassign_sec}
 ---
 
 ## 7. Quality & Research Integrity Statement

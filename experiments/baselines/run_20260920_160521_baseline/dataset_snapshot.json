@@ -1,0 +1,25 @@
+{
+  "total_records": 12836,
+  "train_count": 10278,
+  "val_count": 1279,
+  "test_count": 1279,
+  "train_pct": 80.07167341851044,
+  "val_pct": 9.96416329074478,
+  "test_pct": 9.96416329074478,
+  "train_distribution": {
+    "LIKELY_FALSE": 2846,
+    "MISLEADING_OR_PARTIALLY_SUPPORTED": 3781,
+    "LIKELY_TRUE": 3651
+  },
+  "val_distribution": {
+    "MISLEADING_OR_PARTIALLY_SUPPORTED": 485,
+    "LIKELY_FALSE": 375,
+    "LIKELY_TRUE": 419
+  },
+  "test_distribution": {
+    "LIKELY_TRUE": 459,
+    "LIKELY_FALSE": 340,
+    "MISLEADING_OR_PARTIALLY_SUPPORTED": 480
+  },
+  "reassigned_count": 9
+}

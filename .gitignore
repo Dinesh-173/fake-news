@@ -57,6 +57,7 @@ models/**/*.pt
 models/**/*.safetensors
 models/**/*.bin
 models/**/*.onnx
+*.joblib
 models/**/*.joblib
 !models/**/.gitkeep
 
